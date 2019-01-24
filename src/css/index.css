@@ -16,6 +16,7 @@ p,h2{
   grid-area: header;
   background:#eee;
   position: sticky;
+  -webkit-position: sticky;
   top: 0;
   z-index:2;
   display: grid;
@@ -63,6 +64,7 @@ p,h2{
   /* background: #EEEEEE; */
   background: #1368CE;
   position: sticky;
+  -webkit-position: sticky;
   top: 100px;
   height: 100%;
   color:white;
