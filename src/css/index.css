@@ -102,7 +102,7 @@ ol{
 }
 .sub-menu{
   background: rgba(0,0,0,.3);
-  /* display: none; */
+  display: none;
 }
 .item-container{
   display: flex;
@@ -196,7 +196,7 @@ ol{
   text-transform: uppercase;
   color: #343A40;
   font-size: 2.4em;
-  padding: 15px 0; 
+  padding-bottom: 15px; 
 }
 .content p{
   width: 80%;
@@ -207,6 +207,7 @@ ol{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 35px;
 }
 .suggestion-products{
   display: grid;
@@ -247,19 +248,15 @@ ol{
     background-color: #6d5bf5;
   }
   25% {
-    /* background-color: #f55683; */
     background-color: #E21B3C;
   }
   50% {
-    /* background-color: #f55683; */
     background-color: #1368CE;
   }
   75% {
-    /* background-color: #ffe32a; */
     background-color: #26890C;
   }
   100% {
-    /* background-color: #2a84ff; */
     background-color: #46178F;
   }
 }
