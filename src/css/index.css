@@ -5,8 +5,8 @@ body{
   grid-template-columns: 300px 1fr;
   grid-template-rows: 80px calc(100vh - 80px) calc(100vh - 80px);
   grid-template-areas: "header header"
-  "hero hero"
-  "menu content";
+                        "hero hero"
+                        "menu content";
 }
 p,h2{
   margin:0;
@@ -24,10 +24,23 @@ p,h2{
   grid-template-rows: 1fr; 
 }
 .logo{
-  /* background: #eee;  */
   color: white;
   padding-left: 40px;
   /* transition: background-color 0.5s linear 0.2s; */
+}
+.logo h1{
+  font-family: 'Black Ops One', sans-serif;
+  font-weight: 400;
+  margin: 5px 0 0 0;
+  line-height: 35px;
+}
+.logo h1 img{
+  width: 38px;
+  padding-right: 2px;
+}
+.logo h1:last-child{
+  margin: 0 0 5px 0;
+  padding-left: 2px;
 }
 .search{
   width: 100%;
@@ -41,7 +54,9 @@ p,h2{
 .search input{
   outline: none;
   border:none;
-  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid white;
+  /* background-color: rgba(255, 255, 255, 1); */
+  background: none;
   height: 30px;
   padding: 0  0  0 10px;
   width: 160px;
@@ -52,7 +67,9 @@ p,h2{
   width: 30px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-bottom: 2px solid white;
+
 }
 .search img{
   width: 28px;
@@ -74,18 +91,54 @@ ol{
   list-style: none;
   padding-left: 0px;
 }
+.icon-keyboard_arrow_right{
+  font-size: 28px;
+  margin: 6px 0;
+}
+.icon-keyboard_arrow_right, .icon-sports-shoe, .icon-male, .icon-female, .icon-phone, .icon-t-shirt{
+  width: 20px;
+}
+.helper{
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+}
 .menu-principal li{
-  font-size: 1.2em;
+  font-size: 19px;
+  position: relative;
   display: block;
+}
+.menu-principal li:hover{
+  background-color: rgba(0,0,0,0.28);
+  border-left: 4px solid white;
+}
+.menu-principal li:hover .helper{
+  animation-duration: .3s;
+  animation-name: animation-icons;
+  animation-timing-function: linear;
+}
+.menu-principal li:hover .sub-menu p{
+  animation-duration: initial;
+  animation-name: initial;
+  animation-timing-function: initial;
+}
+.menu-principal li:hover .sub-menu{
+  width: 250px;
+  height: initial;
+  font-size: 1em;
+}
+.menu-principal li:hover .sub-menu li{
+  border:none;
 }
 .menu-principal li p{
   margin: 10px 0;
-  /* padding-bottom: 5px; */
-  /* border-bottom: 1px solid white; */
+}
+.menu-principal li .helper{
+  transform: rotate(0deg);
 }
 .sub-menu li{
-  font-size: 0.85em;
-  padding-top: 10px;
+  font-size: 1em;
+  padding: 10px 0 11px 0;
   margin: 0;
   border:none;
 }
@@ -98,11 +151,23 @@ ol{
   border: none;
 }
 .menu p{
-  padding-left: 25px;
+  padding-left: 10px;
+}
+.sub-menu p{
+  padding-left: 40px;
 }
 .sub-menu{
-  background: rgba(0,0,0,.3);
-  display: none;
+  margin-top: 1px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 296px;
+  top: -1px;
+  z-index: -10;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  transition: all 0.3s ease-in;
+
 }
 .item-container{
   display: flex;
@@ -119,25 +184,25 @@ ol{
   grid-template-areas: "principal secundario-1"
                        "principal secundario-2";
 }
-.producto-hero:nth-child(1){
+.product-hero:nth-child(1){
   grid-area: principal;
   background:url('https://cdn.thesolesupplier.co.uk/2018/09/adidas-Ultra-Tech-Shock-Pink-AQ1190.jpg');  
   background-repeat: no-repeat;
   background-size: cover;
 }
-.producto-hero:nth-child(2){
+.product-hero:nth-child(2){
   grid-area: secundario-1;
   background: url('https://www.stellamccartney.com/cloud/stellawp/uploads/2018/08/513x513_03.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.producto-hero:nth-child(3){
+.product-hero:nth-child(3){
   grid-area: secundario-2;
   background: url('http://as01.epimg.net/colombia/imagenes/2017/12/18/futbol/1513569463_672026_1513569617_noticia_normal.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.producto-hero{
+.product-hero{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -153,14 +218,14 @@ ol{
   padding-bottom: 20px;
   height: 110px;
   clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(-1% 0, 104% 20%, 104% 104%, -1% 104%);
+  -webkit-clip-path: polygon(-1% 20%, 104% 0%, 104% 104%, -1% 104%);
   z-index:1;
   transition: height 0.2s linear;
 }
-.producto-hero:hover .info{
+.product-hero:hover .info{
   height: 150px;
 }
-.producto-hero:hover .product-hero-description{
+.product-hero:hover .product-hero-description{
   font-size: .95em;
 }
 .see-more{
@@ -189,7 +254,6 @@ ol{
 
 .content{
   grid-area: content;
-  padding: 30px 15px;
   box-sizing: border-box;
 }
 .content h2{
@@ -207,21 +271,55 @@ ol{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 35px;
+  padding: 35px 15px;
 }
 .suggestion-products{
   display: grid;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 300px;
+  grid-template-rows: 380px;
   grid-column-gap: 15px;
 }
 .suggestion-product{
   width: 100%;
   height: 100%;
-  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.28);
+  transition: all .5s ease-in-out;
 }
+.suggestion-product:hover{
+  transform: scale(1.05)
+}
+.suggestion-product img{
+  width: 100%;
+  border-bottom: 2px solid #343A40;
+}
+.suggestion-product img:hover{
+ 
+}
+.card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: white;
+}
+.card-info p{
+  padding-bottom: 5px;
+  text-align: left;
+}
+.footer{
+  margin-top: 15px;
+  width: 100%;
+  height: 210px;
+  background: #343A40;
+  -webkit-clip-path: polygon(-1% 10%, 104% 0%, 104% 104%, -1% 104%);
+}
+
+
+
 /* Añadidas con js */
 .color{
   background: #1368CE;
@@ -236,7 +334,7 @@ ol{
 
 
 .background-color-map {
-  animation-duration: 60s;
+  animation-duration: 80s;
   animation-iteration-count: infinite;
   animation-name: animation-colors;
   animation-timing-function: linear;
@@ -248,10 +346,10 @@ ol{
     background-color: #6d5bf5;
   }
   25% {
-    background-color: #E21B3C;
+    background-color: #1368CE;
   }
   50% {
-    background-color: #1368CE;
+    background-color: #E21B3C;
   }
   75% {
     background-color: #26890C;
@@ -280,5 +378,22 @@ ol{
   100% {
     /* background-color: #2a84ff; */
     background-color: #46178F;
+  }
+}
+@keyframes animation-icons{
+  0%{
+    transform: rotate(12deg)
+  }
+  25%{
+    transform: rotate(-12deg)
+  }
+  50%{
+    transform: rotate(6deg)
+  }
+  75%{
+    transform: rotate(-6deg)
+  }
+  100%{
+    transform: rotate(2deg)
   }
 }
