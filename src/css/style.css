@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../assets/fonts/icomoon.eot?jlpxlj');
-  src:  url('../../assets/fonts/icomoon.eot?jlpxlj#iefix') format('embedded-opentype'),
-    url('../../assets/fonts/icomoon.ttf?jlpxlj') format('truetype'),
-    url('../../assets/fonts/icomoon.woff?jlpxlj') format('woff'),
-    url('../../assets/fonts/icomoon.svg?jlpxlj#icomoon') format('svg');
+  src:  url('../../assets/fonts/icomoon.eot?5jpvrv');
+  src:  url('../../assets/fonts/icomoon.eot?5jpvrv#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/icomoon.ttf?5jpvrv') format('truetype'),
+    url('../../assets/fonts/icomoon.woff?5jpvrv') format('woff'),
+    url('../../assets/fonts/icomoon.svg?5jpvrv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -74,6 +74,15 @@
 }
 .icon-search:before {
   content: "\e986";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-half:before {
+  content: "\e9d8";
+}
+.icon-star-full:before {
+  content: "\e9d9";
 }
 .icon-instagram:before {
   content: "\ea92";
