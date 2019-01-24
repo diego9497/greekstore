@@ -1,0 +1,225 @@
+body{
+  margin:0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 80px calc(100vh - 80px) calc(100vh - 80px);
+  grid-template-areas: "header header"
+  "hero hero"
+  "menu content";
+}
+p,h2{
+  margin:0;
+  padding: 0;
+}
+.header{
+  grid-area: header;
+  background:#eee;
+  position: sticky;
+  top: 0;
+  z-index:2;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr; 
+}
+.logo{
+  /* background: #eee;  */
+  color: white;
+  padding-left: 40px;
+  /* transition: background-color 0.5s linear 0.2s; */
+}
+.search{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+.search input{
+  outline: none;
+  border:none;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 30px;
+  padding: 0  0  0 10px;
+  width: 160px;
+}
+.lupa-container{
+  display: flex;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.search img{
+  width: 28px;
+  height: 28px;
+}
+.menu{
+  z-index:2;
+  grid-area: menu;
+  /* background: #EEEEEE; */
+  background: #1368CE;
+  position: sticky;
+  top: 100px;
+  height: 100%;
+  color:white;
+  /* color:black; */
+}
+ol{
+  list-style: none;
+  padding-left: 0px;
+}
+.menu-principal li{
+  font-size: 1.2em;
+  display: block;
+}
+.menu-principal li p{
+  margin: 10px 0;
+  /* padding-bottom: 5px; */
+  /* border-bottom: 1px solid white; */
+}
+.sub-menu li{
+  font-size: 0.85em;
+  padding-top: 10px;
+  margin: 0;
+  border:none;
+}
+.sub-menu li:last-child{
+  padding-bottom: 10px;
+}
+.sub-menu li p{
+  margin:0;
+  padding-bottom: 0;
+  border: none;
+}
+.menu p{
+  padding-left: 25px;
+}
+.sub-menu{
+  background: rgba(0,0,0,.3);
+  /* display: none; */
+}
+.item-container{
+  display: flex;
+  padding-right: 20px;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+}
+.content{
+  grid-area: content;
+}
+.hero{
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-template-areas: "principal secundario-1"
+                       "principal secundario-2";
+}
+.producto-hero:nth-child(1){
+  grid-area: principal;
+  background:url('https://cdn.thesolesupplier.co.uk/2018/09/adidas-Ultra-Tech-Shock-Pink-AQ1190.jpg');  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.producto-hero:nth-child(2){
+  grid-area: secundario-1;
+  background: url('https://www.stellamccartney.com/cloud/stellawp/uploads/2018/08/513x513_03.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.producto-hero:nth-child(3){
+  grid-area: secundario-2;
+  background: url('http://as01.epimg.net/colombia/imagenes/2017/12/18/futbol/1513569463_672026_1513569617_noticia_normal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.producto-hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+.info{
+  background: rgba(245,245,245,0.9);
+  /* background: #EF5350; */
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  height: 110px;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(-1% 0, 104% 20%, 104% 104%, -1% 104%);
+  z-index:1;
+  transition: height 0.2s linear;
+}
+.producto-hero:hover .info{
+  height: 150px;
+}
+.producto-hero:hover .product-hero-description{
+  font-size: .95em;
+}
+.see-more{
+  padding: 10px 35px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:black;
+  font-size: .85em;
+  border:2px solid black;
+  /* background-color: black;
+  color:white; */
+}
+.product-hero-title{
+  font-size: 1.3em;
+  font-weight: 600;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.product-hero-description {
+  font-size: 0;
+  padding-bottom: 7px;
+  transition: font-size 0.2s linear;
+}
+
+/* Añadidas con js */
+.color{
+  background: #1368CE;
+  color: white;
+  border-bottom: none;
+}
+
+
+
+.background-color-map {
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-name: animation-colors;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes animation-colors {
+  0% {
+    background-color: #6d5bf5;
+  }
+  25% {
+    /* background-color: #f55683; */
+    background-color: #E21B3C;
+  }
+  50% {
+    /* background-color: #f55683; */
+    background-color: #1368CE;
+  }
+  75% {
+    /* background-color: #ffe32a; */
+    background-color: #26890C;
+  }
+  100% {
+    /* background-color: #2a84ff; */
+    background-color: #46178F;
+  }
+}
