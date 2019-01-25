@@ -1,22 +1,17 @@
-const header = document.getElementById('header');
-const logo = document.getElementById('logo');
 const menu = document.getElementById('menu');
+const header = document.getElementById('header');
 const hero = document.getElementById('hero');
-console.log(menu);
+const olas = document.getElementById('olas')
 
 document.addEventListener('scroll', e => {
   if (document.documentElement.scrollTop >= hero.clientHeight) {
-    //   console.log('Entró')
-    //   // logo.classList.add('color')
-    //   header.classList.remove('background-color-map')
     menu.classList.add('fixed')
-
-    //   // menu.classList.add('color')
+    header.classList.add('border')
+    olas.classList.remove('hide')
   } else {
-    //   // logo.classList.remove('color')
-    //   // menu.classList.remove('color')
-    //   header.classList.add('background-color-map')
     menu.classList.remove('fixed')
+    olas.classList.add('hide')
+    header.classList.remove('border')
   }
 })
 

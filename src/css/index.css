@@ -3,7 +3,7 @@ body{
   font-family: 'Titillium Web', sans-serif;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 80px calc(100vh - 80px) calc(100vh - 80px);
+  grid-template-rows: 80px minmax(500px,calc(100vh - 80px)) calc(100vh - 80px);
   grid-template-areas: "header header"
                         "hero hero"
                         "menu content";
@@ -64,8 +64,8 @@ p,h2{
 .search input{
   outline: none;
   border:none;
+  color: white;
   border-bottom: 2px solid white;
-  /* background-color: rgba(255, 255, 255, 1); */
   background: none;
   height: 30px;
   padding: 0  0  0 10px;
@@ -77,9 +77,7 @@ p,h2{
   width: 30px;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(255, 255, 255, 0.5); */
   border-bottom: 2px solid white;
-
 }
 .search img{
   width: 28px;
@@ -89,8 +87,6 @@ p,h2{
   z-index:2;
   grid-area: menu;
   background: #1368CE;
-  position: sticky;
-  -webkit-position: sticky;
   top: 80px;
   height: 100%;
   color:white;
@@ -111,8 +107,10 @@ ol{
   padding-left: 40px;
   align-items: center;
 }
+.menu-principal{
+  margin:26px 0;
+}
 .menu-principal li{
-  font-size: 19px;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
@@ -217,36 +215,44 @@ ol{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
 .info{
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 20px 10px;
+  padding: 15px 10px;
   height: 70px;
-  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  clip-path: polygon(-1% 25%, 50% 0%, 104% 25%, 104% 104%, -1% 104%);
   -webkit-clip-path: polygon(-1% 25%, 50% 0%, 104% 25%, 104% 104%, -1% 104%);
   z-index:1;
   transition: all 0.2s linear;
 }
 .product-hero:hover .info{
   height: 95px;
+  clip-path: polygon(-1% 0%, 50% 0%, 104% 0%, 104% 104%, -1% 104%);
   -webkit-clip-path: polygon(-1% 0%, 50% 0%, 104% 0%, 104% 104%, -1% 104%);
 }
 .product-hero:hover .product-hero-description{
   font-size: .95em;
 }
 .see-more{
-  padding: 8px 35px;
+  padding: 6px 35px;
+      border-radius: 5px;
+  margin-top: 2px;
   text-transform: uppercase;
   font-weight: 600;
   color: white;
   font-size: .85em;
-  border:2px solid  white;
+  border:1.5px solid  white;
+  transition: transform .3s;
+  will-change: transform;
 }
+.see-more:hover{
+  transform: scale(1.05);
+  
+} 
 .product-hero-title{
   color: white;
   /* font-family: 'Amaranth'; */
@@ -264,15 +270,10 @@ ol{
 
 .content{
   grid-area: content;
+  color: #343A40;
   box-sizing: border-box;
 }
-.content h2{
-  text-transform: uppercase;
-  color: #343A40;
-  font-size: 2.4em;
-  padding-bottom: 15px; 
-}
-.content p{
+.suggestion-description{
   width: 80%;
   text-align: center;
   padding-bottom: 35px; 
@@ -283,8 +284,11 @@ ol{
   align-items: center;
   padding: 35px 15px;
 }
-.suggestion h2{
+.suggestion-title{
   font-family: 'Amaranth';
+  text-transform: uppercase;
+  font-size: 2.4em;
+  padding-bottom: 15px; 
 }
 .suggestion-products{
   display: grid;
@@ -309,35 +313,49 @@ ol{
   width: 100%;
   border-bottom: 2px solid #343A40;
 }
-.suggestion-product img:hover{
- 
-}
 .card-info{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 10px;
   background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  line-height: 1em;
 }
-.card-info p{
-  padding-bottom: 5px;
-  text-align: left;
+.card-category{
+  font-size: 0.9em;
+  font-weight: 200;
+  padding-bottom: 7px;
+  line-height: 1em;
 }
 .card-title{
   font-weight: 600;
-}
-.card-description{
-  font-size: 0.8em;
+  text-transform: uppercase;
+  padding-bottom: 5px;
   line-height: 1em;
 }
+.card-bottom{
+  display: flex;
+  justify-content: space-between;
+  padding-top:7px;
+}
+.card-price, .card-rating{
+  line-height: 1em;
+  font-size: 0.85em;
+}
+.card-rating{
+  color:#FFC001;
+}
+
 .footer{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-top: 15px;
   width: 100%;
-  height: 480px;
+  height: 280px;
   background: #343A40;
+  clip-path: polygon(-1% 10%, 104% 0%, 104% 104%, -1% 104%);
   -webkit-clip-path: polygon(-1% 10%, 104% 0%, 104% 104%, -1% 104%);
 }
 
@@ -351,8 +369,12 @@ ol{
 }
 .fixed{
   position: fixed;
+  position: -ms-device-fixed;
   top:80px;
   width: 300px;
+}
+.border{
+  border-radius: 0 0 12px 0;
 }
 /*Holas*/
 
@@ -482,4 +504,7 @@ ol{
   100%{
     transform: rotate(1deg)
   }
+}
+.hide{
+  display: none;
 }
