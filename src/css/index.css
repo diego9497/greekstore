@@ -3,10 +3,11 @@ body{
   font-family: 'Titillium Web', sans-serif;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 80px minmax(500px,calc(100vh - 80px)) calc(100vh - 80px);
+  grid-template-rows: 80px minmax(500px,calc(100vh - 80px)) 1fr 180px;
   grid-template-areas: "header header"
                         "hero hero"
-                        "menu content";
+                        "menu content"
+                        "footer footer";
 }
 p,h2{
   margin:0;
@@ -18,7 +19,7 @@ p,h2{
   position: fixed;
   width:100%;
   top: 0;
-  z-index:2;
+  z-index:2000;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr; 
@@ -87,9 +88,10 @@ p,h2{
   z-index:2;
   grid-area: menu;
   background: #1368CE;
-  top: 80px;
+  position: relative;
   height: 100%;
   color:white;
+  height: calc(100vh - 80px) ;
 }
 ol{
   list-style: none;
@@ -107,6 +109,20 @@ ol{
   padding-left: 40px;
   align-items: center;
 }
+.border-menu{
+  width: 9px;
+  height: 25px;
+  position: absolute;
+  right: -9px;
+}
+.border-menu-white{
+  display: inherit;
+  border-radius: 50px 0 0 0;
+  background: white;
+  width: 10px;
+  height: 25px;
+}
+
 .menu-principal{
   margin:26px 0;
 }
@@ -239,7 +255,7 @@ ol{
 }
 .see-more{
   padding: 6px 35px;
-      border-radius: 5px;
+  border-radius: 5px;
   margin-top: 2px;
   text-transform: uppercase;
   font-weight: 600;
@@ -251,7 +267,7 @@ ol{
 }
 .see-more:hover{
   transform: scale(1.05);
-  
+  background: rgba(0,0,0,0.5);  
 } 
 .product-hero-title{
   color: white;
@@ -344,21 +360,25 @@ ol{
   font-size: 0.85em;
 }
 .card-rating{
-  color:#FFC001;
+  color:#98989A;
 }
 
 .footer{
+  grid-area: footer;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 15px;
   width: 100%;
-  height: 280px;
-  background: #343A40;
-  clip-path: polygon(-1% 10%, 104% 0%, 104% 104%, -1% 104%);
-  -webkit-clip-path: polygon(-1% 10%, 104% 0%, 104% 104%, -1% 104%);
+  /* height: 230px; */
+  /* clip-path: polygon( 0 0, 100% 20%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 30% 0, 100% 20%, 100% 100%, 0% 100%); */
 }
-
+.footer-left{
+  width:300px;
+  height: 100%;
+}
+.footer-right{
+  width:calc(100% - 300px);
+  height: 100%;
+}
 
 
 /* Añadidas con js */
@@ -421,7 +441,7 @@ ol{
 .injected-svg{
   position: absolute;
   bottom: 0;
-  transform: translateY(-82px);
+  /* transform: translateY(-82px); */
 }
 @keyframes movimiento{
   0%{
