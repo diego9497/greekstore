@@ -211,19 +211,19 @@ ol{
 }
 .product-hero:nth-child(1){
   grid-area: principal;
-  background:url('https://cdn.thesolesupplier.co.uk/2018/09/adidas-Ultra-Tech-Shock-Pink-AQ1190.jpg');  
+  background:url('../../assets/images/zapato-hero.webp');  
   background-repeat: no-repeat;
   background-size: cover;
 }
 .product-hero:nth-child(2){
   grid-area: secundario-1;
-  background: url('https://www.stellamccartney.com/cloud/stellawp/uploads/2018/08/513x513_03.jpg');
+  background: url('../../assets/images/running-hero.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .product-hero:nth-child(3){
   grid-area: secundario-2;
-  background: url('http://as01.epimg.net/colombia/imagenes/2017/12/18/futbol/1513569463_672026_1513569617_noticia_normal.jpg');
+  background: url('../../assets/images/duque-hero.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
