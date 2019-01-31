@@ -55,11 +55,22 @@ const imgTop = document.querySelector('.img-top img');
 const imgBehindSource = document.querySelector('.img-behind source:nth-child(1)');
 const imgTopSource = document.querySelector('.img-top source:nth-child(1)');
 const info = document.getElementById('hero-info')
-const play = document.getElementById('play')
-play.addEventListener('click', () => {
+const infoContainer = document.querySelector('.hero-info-container')
+const controls = document.querySelector('.controls')
+const next = document.getElementById('next')
+const previous = document.getElementById('previous')
+next.addEventListener('click', () => {
+  infoContainer.classList.add('opacity')
+  controls.classList.add('opacity')
   info.classList.add('info-out')
   imgTopPicture.classList.remove('remove-animation');
   imgTopPicture.classList.add('front')
+})
+previous.addEventListener('click', () => {
+  info.classList.add('info-out')
+  imgTopPicture.classList.remove('remove-animation');
+  imgTopPicture.classList.add('front')
+  infoContainer.classList.remove('opacity')
 })
 
 let cont = 0;
@@ -73,6 +84,8 @@ info.addEventListener('animationend', (e) => {
   }
   if (e.animationName === "info-out") {
     info.classList.remove('info-out')
+    infoContainer.classList.remove('opacity')
+    controls.classList.remove('opacity')
   }
 })
 imgTopPicture.addEventListener('animationend', (e) => {
