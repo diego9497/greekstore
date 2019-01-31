@@ -9,11 +9,77 @@
 </head>
 
 <body>
-  <header class="header background-color-map" id="header">
+  <header class="header" id="header">
     <div class="logo" id="logo">
       <h1>Greek</h1>
       <h1><img src="assets/images/player.svg" alt="">Store</h1>
     </div>
+    <nav class="menu">
+      <ol class="menu-principal">
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Inicio</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Hombres</p>
+            </div>
+          </div>
+          <ol class="sub-menu">
+            <li>
+              <p>elemento 1</p>
+            </li>
+            <li>
+              <p>elemento 2</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Mujeres</p>
+            </div>
+          </div>
+          <ol class="sub-menu">
+            <li>
+              <p>elemento 1</p>
+            </li>
+          </ol>
+
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Calzado</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Equipaciones</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Contacto</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </nav>
     <div class="search">
       <input type="text" />
       <div class="lupa-container">
@@ -21,119 +87,20 @@
       </div>
       <i class="icon-user"></i>
       <i class="icon-cart"></i>
-
+      <div class="menu-button" style="display:none">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </div>
   </header>
 
-  <aside class="menu background-color-map" id="menu">
-    <div id="border-menu" class="border-menu background-color-map">
-      <div id="border-menu-white" class="border-menu-white"></div>
-    </div>
-    <nav>
-      <ol class="menu-principal">
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-home3"></i>
-              <p>Inicio</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-          <ol class="sub-menu background-color-map">
-            <li>
-              <p>elemento 1</p>
-            </li>
-            <li>
-              <p>elemento 2</p>
-            </li>
-            <li>
-              <p>elemento 3</p>
-            </li>
-          </ol>
-        </li>
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-male"></i>
-              <p>Hombres</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-          <ol class="sub-menu background-color-map">
-            <li>
-              <p>elemento 1</p>
-            </li>
-            <li>
-              <p>elemento 2</p>
-            </li>
-            <li>
-              <p>elemento 3</p>
-            </li>
-            <li>
-              <p>elemento 3</p>
-            </li>
-          </ol>
-        </li>
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-female"></i>
-              <p>Mujeres</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-          <ol class="sub-menu background-color-map">
-            <li>
-              <p>elemento 1</p>
-            </li>
-          </ol>
-        </li>
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-sports-shoe"></i>
-              <p>Calzado</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-        </li>
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-t-shirt"></i>
-              <p>Equipaciones</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-        </li>
-        <li>
-          <div class="item-container">
-            <div class="helper">
-              <i class="icon-phone"></i>
-              <p>Contacto</p>
-            </div>
-            <i class="icon-keyboard_arrow_right"></i>
-          </div>
-        </li>
-      </ol>
-    </nav>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 126.5"
-      style="margin-bottom: -5px; enable-background:new 0 0 300 126.5;" xml:space="preserve" class="injected-svg js-svg-injector hide"
-      data-parent="#SVGwaveWithDots" id="olas">
-      <path class="wave-bottom-with-dots-0 fill-primary" opacity=".6" d="M0,58.9c0-0.9,5.1-2,5.8-2.2c6-0.8,11.8,2.2,17.2,4.6c4.5,2.1,8.6,5.3,13.3,7.1C48.2,73.3,61,73.8,73,69  c43-16.9,40-7.9,84-2.2c44,5.7,83-31.5,143-10.1v69.8H0C0,126.5,0,59,0,58.9z"></path>
-      <path class="wave-bottom-with-dots-1 fill-primary" d="M300,68.5v58H0v-58c0,0,43-16.7,82,5.6c12.4,7.1,26.5,9.6,40.2,5.9c7.5-2.1,14.5-6.1,20.9-11  c6.2-4.7,12-10.4,18.8-13.8c7.3-3.8,15.6-5.2,23.6-5.2c16.1,0.1,30.7,8.2,45,16.1c13.4,7.4,28.1,12.2,43.3,11.2  C282.5,76.7,292.7,74.4,300,68.5z"></path>
-      <g>
-        <circle class="wave-bottom-with-dots-2 fill-danger" opacity="0" cx="259.5" cy="17" r="13"></circle>
-        <circle class="wave-bottom-with-dots-1 fill-primary" opacity="0" cx="290" cy="35.5" r="8.5"></circle>
-        <circle class="wave-bottom-with-dots-3 fill-success" opacity="0" cx="288" cy="5.5" r="5.5"></circle>
-        <circle class="wave-bottom-with-dots-4 fill-warning" opacity="0" cx="232.5" cy="34" r="2"></circle>
-      </g>
-    </svg>
-  </aside>
-
   <section class="hero" id="hero">
-    <div class="product-hero">
-      <div class="info background-color-map">
+    <!-- <div class="product-hero">
+      <figure>
+        <img class="product-hero-image" src="assets/images/zapato-hero.webp" alt="Imagen">
+      </figure>
+      <div class="info">
         <h2 class="product-hero-title">Titulo producto</h2>
         <p class="product-hero-description">Esta es informacion relacionada al producto, estamos de descuentos!</p>
         <div class="see-more">
@@ -142,25 +109,40 @@
       </div>
     </div>
     <div class="product-hero">
-      <div class="info background-color-map">
+      <figure>
+        <img class="product-hero-image" src="assets/images/running-hero.webp" alt="Imagen">
+      </figure>
+      <div class="info">
         <h2 class="product-hero-title">Titulo producto</h2>
         <p class="product-hero-description">Esta es informacion relacionada al producto, estamos de descuentos!</p>
         <div class="see-more">
           <p>Ver más</p>
         </div>
-
       </div>
     </div>
     <div class="product-hero">
-      <div class="info background-color-map">
+      <figure>
+        <img class="product-hero-image" src="assets/images/duque-hero.webp" alt="Imagen">
+      </figure>
+      <div class="info">
         <h2 class="product-hero-title">Titulo producto</h2>
         <p class="product-hero-description">Esta es informacion relacionada al producto, estamos de descuentos!</p>
         <div class="see-more">
           <p>Ver más</p>
         </div>
       </div>
+    </div> -->
+    <picture class="img-behind" id="img-behind">
+      <source srcset="./assets/images/hero-1.webp" type="image/webp">
+      <img src="./assets/images/hero-1.jpg" alt="">
+    </picture>
+    <picture class="img-top" id="img-top">
+      <source srcset="" type="image/webp">
+      <img src="" alt="">
+    </picture>
+    <div class="hero-info" id="hero-info">
+      <div class="play" id="play">Play</div>
     </div>
-
   </section>
   <section class="content">
     <div class=" suggestion">
