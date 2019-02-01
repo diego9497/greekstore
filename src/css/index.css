@@ -47,7 +47,7 @@ p,h2,figure{
   top: 0;
   z-index:2000;
   display: grid;
-  grid-template-columns: 210px 1fr 320px;
+  grid-template-columns: 190px 1fr 280px;
   grid-template-rows: 1fr; 
 }
 .logo{
@@ -73,24 +73,56 @@ p,h2,figure{
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   padding-right: 40px;
   box-sizing: border-box;
 }
-.icon-user, .icon-cart{
-  color:white;
-  font-size: 28px;
-  padding-left: 15px;
+.search-down{
   margin-top: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.icon-user{
+  color:white;
+  font-size: 22px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+.icon-user::before{
+  color: white;
+  padding-right: 7px;
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  font-size: 0.55em;
+  margin-top: 2px;
+  content: "Iniciar sesión"
 }
 .icon-cart{
-  font-size: 25px;
+  color:white;
+  margin-top: 5px;
+  font-size: 22px;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.icon-cart::before{
+  color: white;
+  padding-right: 7px;
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  font-size: 0.55em;
+  margin-top: 2px;
+  content: "Mi carrito"
 }
 .search input{
   outline: none;
   border:none;
+  border-radius: 0px;
   color: white;
   border-bottom: 2px solid white;
   background: none;
@@ -177,7 +209,7 @@ ol{
   width: 20px;
 }
 .helper{
-  padding: 0 10px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   height: 80px;
@@ -242,9 +274,6 @@ ol{
   margin:0;
   padding-bottom: 0;
   border: none;
-}
-.menu p{
-  padding-left: 10px;
 }
 .sub-menu p{
   padding-left: 40px;
@@ -633,10 +662,123 @@ ol{
           
         }
 
-.injected-svg{
-  position: absolute;
-  bottom: 0;
-  /* transform: translateY(-82px); */
+.menu-lateral{
+  display: none;
+  transform: translateX(-100vw);
+  transition: transform .3s ease;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  z-index:2;
+  background: #141414;
+  position: relative;
+  height: 100%;
+  color:white;
+  height: calc(100vh - 80px) ;
+}
+ol{
+  list-style: none;
+  padding-left: 0px;
+}
+.icon-keyboard_arrow_right{
+  font-size: 28px;
+  margin: 6px 0;
+}
+.icon-keyboard_arrow_right, .icon-sports-shoe, .icon-male, .icon-female, .icon-phone, .icon-t-shirt, .icon-home3{
+  width: 20px;
+}
+.helper-lateral{
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+}
+.menu-principal-lateral{
+  display: flex;
+  flex-direction: column;
+  margin:26px 0;
+}
+.menu-principal-lateral li{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+.menu-principal-lateral li:hover{
+  background-color: rgba(0,0,0,0.28);
+  border-bottom: 1px solid white;
+}
+.menu-principal-lateral li:hover .item-container-lateral{
+  border: none;
+}
+.menu-principal-lateral li:hover .helper-lateral i{
+  animation-duration: .3s;
+  animation-name: animation-icons;
+  animation-timing-function: linear;
+}
+.menu-principal-lateral li:hover .sub-menu-lateral p{
+  animation-duration: initial;
+  animation-name: initial;
+  animation-timing-function: initial;
+}
+.menu-principal-lateral li:hover .sub-menu-lateral li{
+  border:none;
+}
+.menu-principal-lateral li p{
+  margin: 10px 0;
+}
+.menu-principal-lateral li .helper-lateral{
+  transform: rotate(0deg);
+}
+.menu-principal-lateral li .icon-keyboard_arrow_right{
+  transform: rotate(90deg);
+}
+.sub-menu-lateral li{
+  font-size: 1em;
+  padding: 10px 0 11px 0;
+  margin: 0;
+  border:none;
+}
+.sub-menu-lateral li:last-child{
+  padding-bottom: 10px;
+}
+.sub-menu-lateral li p{
+  margin:0;
+  padding-bottom: 0;
+  border: none;
+}
+.menu-lateral p{
+  padding-left: 10px;
+}
+.sub-menu-lateral p{
+  padding-left: 40px;
+}
+.sub-menu-lateral{
+  display: none;
+  margin-top: 1px;
+  box-sizing: border-box;
+  z-index: -10;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  transition: all 0.3s ease-in;
+}
+.item-container-lateral{
+  display: flex;
+  padding-right: 20px;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+}
+.show-sub-menu-lateral{
+  display: initial;
+  width: 250px;
+  height: initial;
+  font-size: 1em;
+} 
+@media screen and (max-width:1150px){
+  .helper{
+    padding: 0 10px;
+  }
+  
 }
 
 @media screen and (max-width:1024px){
@@ -648,23 +790,8 @@ ol{
                         "content"
                         "footer";
   }
-  .menu{
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    transform: translateX(-150vw);
-    transition: transform .2s ease-in;
-  }
-  .hero{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: calc(100vh - 80px) 1fr ;
-    grid-template-areas: "principal principal"
-                         "secundario-1 secundario-2";
-  }
-  .border-menu{
-    right: initial;
-  }
-  .border-menu-white{
-    width: 0;
+  .menu-lateral{
+    display: initial;
   }
 }
 

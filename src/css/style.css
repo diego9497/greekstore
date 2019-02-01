@@ -63,13 +63,13 @@
 .icon-home3:before {
   content: "\e909";
 }
-.icon-cart:before {
+.icon-cart::after {
   content: "\e93a";
 }
 .icon-phone:before {
   content: "\e942";
 }
-.icon-user:before {
+.icon-user::after {
   content: "\e971";
 }
 .icon-search:before {

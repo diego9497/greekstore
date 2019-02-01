@@ -108,3 +108,11 @@ changeImages = () => {
 
 
 
+// botones menu-lateral
+const botonesMenu = document.querySelectorAll('.menu-principal-lateral .item-menu-principal-lateral')
+botonesMenu.forEach(element => {
+  element.addEventListener('click', () => {
+    element.querySelector('ol').classList.toggle('show-sub-menu-lateral')
+  })
+});
+
