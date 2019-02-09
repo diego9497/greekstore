@@ -26,18 +26,23 @@
 
 body{
   margin:0;
+  background: #F9F7F6;
   font-family: 'Titillium Web', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1024px 1fr;
-  grid-template-rows: 80px minmax(500px,calc(100vh - 80px)) 1fr 180px;
+  grid-template-rows: 80px minmax(500px,calc(100vh - 80px)) 600px 1fr 280px;
   grid-template-areas: "header header header"
                         "hero hero hero"
+                        "last last last"
                         ". content ."
                         "footer footer footer";
 }
 p,h2,figure{
   margin:0;
   padding: 0;
+}
+button{
+  font-family: 'Titillium Web', sans-serif;
 }
 .header{
   grid-area: header;
@@ -47,13 +52,12 @@ p,h2,figure{
   top: 0;
   z-index:2000;
   display: grid;
-  grid-template-columns: 190px 1fr 280px;
+  grid-template-columns: 190px 1fr 190px;
   grid-template-rows: 1fr; 
 }
 .logo{
   color: white;
   padding-left: 40px;
-  /* transition: background-color 0.5s linear 0.2s; */
 }
 .logo h1{
   font-family: 'Black Ops One', sans-serif;
@@ -69,80 +73,64 @@ p,h2,figure{
   margin: 0 0 5px 0;
   padding-left: 2px;
 }
-.search{
+.menu-search{
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 40px;
-  box-sizing: border-box;
-}
-.search-up{
-  display: flex;
-  align-items: center;
-}
-.search-down{
-  margin-top: 4px;
-  display: flex;
   justify-content: flex-end;
+    align-items: center;
+  padding-right: 40px;
   box-sizing: border-box;
 }
 .icon-user{
   color:white;
   font-size: 22px;
-  margin-top: 4px;
   display: flex;
   align-items: center;
-}
-.icon-user::before{
-  color: white;
-  padding-right: 7px;
-  font-family: 'Titillium Web';
-  text-transform: uppercase;
-  font-size: 0.55em;
-  margin-top: 2px;
-  content: "Iniciar sesión"
+  padding-left: 15px;
 }
 .icon-cart{
   color:white;
-  margin-top: 5px;
   font-size: 22px;
-  padding-left: 10px;
+  padding-left: 15px;
   display: flex;
   align-items: center;
 }
-.icon-cart::before{
-  color: white;
-  padding-right: 7px;
-  font-family: 'Titillium Web';
-  text-transform: uppercase;
-  font-size: 0.55em;
-  margin-top: 2px;
-  content: "Mi carrito"
+.search-container{
+  justify-self: center;
+  z-index: 999;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  width: 90%;
+  height: 60px;
+  background: rgba(255,255,255,.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
-.search input{
+.search{
   outline: none;
   border:none;
   border-radius: 0px;
-  color: white;
-  border-bottom: 2px solid white;
+  color: black;
+  border-bottom: 1px solid black;
   background: none;
   height: 30px;
   padding: 0  0  0 10px;
-  width: 180px;
+  width: 80%;
 }
 .lupa-container{
   display: flex;
-  height: 30px;
-  width: 30px;
+  height: 100%;
+  width: 75px;
+  background:  rgba(255,255,255,.05);
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid white;
+  box-sizing: border-box;
 }
-.search img{
-  width: 28px;
-  height: 28px;
+.lupa-container img{
+  width: 32px;
+  height: 32px;
 }
 .menu-button{
   display: none;
@@ -484,6 +472,73 @@ ol{
   color: #343A40;
   box-sizing: border-box;
 }
+.lastest{
+  margin-top: 30px;
+  grid-area: last;
+}
+.lastest-arrivals{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  grid-template-areas: "last-arrival1 last-arrival2 last-arrival4"
+                       "last-arrival1 last-arrival3 last-arrival4";
+}
+.lastest-arrivals-product{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.lastest-arrivals-product-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lastest-arrivals-product-info{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+.lastest-arrivals-product-info-button{
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  border:none;
+  text-transform: uppercase;
+  position: relative;
+}
+.lastest-arrivals-product-info-button::after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(3px, 3px);
+  box-shadow: inset 0 0 0 1px black;
+}
+.lap1{
+  grid-area: last-arrival1;
+}
+.lap2{
+  grid-area: last-arrival2;
+}
+.lap3{
+  grid-area: last-arrival3;
+}
+.lap4{
+  grid-area: last-arrival4;
+}
 .suggestion-description{
   width: 80%;
   text-align: center;
@@ -495,18 +550,19 @@ ol{
   align-items: center;
   padding: 35px 15px;
 }
-.suggestion-title{
+.section-title{
   font-family: 'Amaranth';
   text-transform: uppercase;
   font-size: 2.4em;
   padding-bottom: 15px; 
+  color: #343A40;
+  text-align: center;
 }
 .suggestion-products{
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 380px;
-  grid-column-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 15px;
 }
 .suggestion-product{
   width: 100%;
@@ -523,13 +579,17 @@ ol{
 }
 .card-image-container{
   margin: 0;
+  height: 280px;
   position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
 }
 .card-image{
   width: 100%;
-  height: 280px;
+  height: 100%;
   object-fit: cover;
   border-bottom: 2px solid #343A40;
+  transition: all .9s ease;
 }
 .card-view-container{
   display: grid;
@@ -542,7 +602,7 @@ ol{
   background: rgba(0,0,0,0.28);
   display: none;
   opacity: 0;
-  transition: opacity .2s linear;
+  transition: all .5s ease;
 }
 .card-view{
   width:55px;
@@ -591,19 +651,18 @@ ol{
 }
 .footer{
   grid-area: footer;
-  display: flex;
   width: 100%;
 }
-.footer-left{
-  width:300px;
-  height: 100%;
+.footer-up{
+  background: white;
+  width: 100%;
+  height: 200px;
 }
-.footer-right{
-  width:calc(100% - 300px);
-  height: 100%;
+.footer-down{
+  background: #363738;
+  width: 100%;
+  height: 80px;
 }
-
-
 /* Añadidas con js */
 .color{
   background: #1368CE;
@@ -785,6 +844,7 @@ ol{
     grid-template-rows: 80px calc(100vh - 80px) 1fr 180px;
     grid-template-areas: "header"
                         "hero"
+                        "last"
                         "content"
                         "footer";
   }
@@ -829,8 +889,24 @@ ol{
   .search{
     padding-right: 20px;
   }
+  .lastest-arrivals{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 400px;
+    grid-template-areas: "last-arrival1 last-arrival2"
+                       "last-arrival1 last-arrival4"
+                       "last-arrival3 last-arrival3";
+  }
 }
-
+@media screen and (max-width:600px){
+  .lastest-arrivals{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,250px);
+    grid-template-areas: "last-arrival1"
+                         "last-arrival2"
+                         "last-arrival3" 
+                         "last-arrival4";
+  }
+}
 @keyframes movimiento{
   0%{
     transform: translateY(0px) translateX(0px) scale(1);
