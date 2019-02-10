@@ -116,3 +116,8 @@ botonesMenu.forEach(element => {
   })
 });
 
+const menuButton = document.getElementById('menu-button');
+const menuLateral = document.getElementById('menu-lateral');
+menuButton.addEventListener('click', () => {
+  menuLateral.classList.toggle('show-menu-lateral')
+})
