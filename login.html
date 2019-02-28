@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 140px 1fr;
+      grid-template-areas: "question question"
+        "signup login";
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto;
+      grid-column-gap: 15px;
+      grid-row-gap: 10px;
+    }
+
+    .question {
+      grid-area: question;
+      font-family: 'Amaranth';
+      width: 300px;
+      justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #141414;
+      color: white;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    }
+
+    .question h2 {
+      padding-bottom: 35px;
+    }
+
+    .signup {
+      grid-area: signup;
+    }
+
+    .login {
+      grid-area: login;
+    }
+
+    .login,
+    .signup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 35px 0px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .content form input {
+      width: 80%;
+      height: 45px;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid lightgray;
+      outline: none;
+    }
+
+    .content form input:focus {
+      border: 1px solid #2196F3;
+      border-left: 10px solid #2196F3;
+      padding-left: 10px;
+    }
+
+    #user,
+    #user-signup {
+      margin-top: 30px;
+    }
+
+    .content form h3 {
+      font-family: 'Amaranth';
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      padding-bottom: 20px;
+      color: #343A40;
+      text-align: center;
+      width: 80%;
+      border-bottom: .5px solid lightgray;
+    }
+
+    .content form button {
+      width: 80%;
+      height: 45px;
+      background: #2196F3;
+      border: none;
+      color: white;
+      font-size: 1em;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="content">
+    <article class="question">
+      <h2>¿Tienes una cuenta?</h2>
+    </article>
+    <form action="" class="signup">
+      <h3>Crear cuenta</h3>
+      <input type="text" name="user-signup" id="user-signup" placeholder="Usuario">
+      <input type="text" name="email-signup" id="email-signup" placeholder="Correo electrónico">
+      <input type="password" name="password-signup" id="password-signup" placeholder="Contraseña">
+      <input type="password" name="password-signup2" id="password-signup2" placeholder="Confirmar contraseña">
+      <button>Crear cuenta</button>
+    </form>
+    <form action="" class="login">
+      <h3>Iniciar sesión</h3>
+      <input type="text" name="user" id="user" placeholder="Usuario">
+      <input type="password" name="password" id="password" placeholder="Contraseña">
+      <button>Iniciar sesión</button>
+    </form>
+  </section>
+</body>
+<link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
+
+</html>
