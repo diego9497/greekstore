@@ -985,8 +985,7 @@ ol{
 }
 @media screen and (max-width:600px){
   body{    
-    grid-template-rows: 80px calc(100vh - 80px) 1121px 1fr 180px;
-
+    grid-template-rows: 80px calc(100vh - 80px) 1121px 1fr 510px;
   }
   .lastest-arrivals{
     grid-template-columns: 1fr;
@@ -998,6 +997,20 @@ ol{
   }
   .menu-search{
     padding-right: 10px;
+  }
+  .footer-up{
+    height: 460px;
+  }
+  .footer-up .footer-container{
+    flex-direction: column;
+  }
+  .footer-up-right, .footer-up-left{
+    width: 100%;
+    padding: 5px 20px;
+    box-sizing: border-box;
+  }
+  .footer-up-right h2{
+    margin-top: 0;
   }
 }
 @media screen and (max-width:426px){
