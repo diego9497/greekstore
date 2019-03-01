@@ -323,6 +323,9 @@ ol{
   content: "\e942";
 }
 
+.page-content{
+  margin-top: 80px;
+}
 
 .footer{
   width: 100%;

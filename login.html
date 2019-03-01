@@ -6,127 +6,261 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
-  <style>
-    body {
-      width: 100%;
-      margin: 0;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 140px 1fr;
-      grid-template-areas: "question question"
-        "signup login";
-      justify-content: center;
-      width: 80%;
-      margin: 0 auto;
-      grid-column-gap: 15px;
-      grid-row-gap: 10px;
-    }
-
-    .question {
-      grid-area: question;
-      font-family: 'Amaranth';
-      width: 300px;
-      justify-self: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #141414;
-      color: white;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
-    }
-
-    .question h2 {
-      padding-bottom: 35px;
-    }
-
-    .signup {
-      grid-area: signup;
-    }
-
-    .login {
-      grid-area: login;
-    }
-
-    .login,
-    .signup {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 35px 0px;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    }
-
-    .content form input {
-      width: 80%;
-      height: 45px;
-      padding-left: 20px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      border: 1px solid lightgray;
-      outline: none;
-    }
-
-    .content form input:focus {
-      border: 1px solid #2196F3;
-      border-left: 10px solid #2196F3;
-      padding-left: 10px;
-    }
-
-    #user,
-    #user-signup {
-      margin-top: 30px;
-    }
-
-    .content form h3 {
-      font-family: 'Amaranth';
-      margin: 0;
-      text-transform: uppercase;
-      font-size: 1.6em;
-      padding-bottom: 20px;
-      color: #343A40;
-      text-align: center;
-      width: 80%;
-      border-bottom: .5px solid lightgray;
-    }
-
-    .content form button {
-      width: 80%;
-      height: 45px;
-      background: #2196F3;
-      border: none;
-      color: white;
-      font-size: 1em;
-      margin-top: 15px;
-    }
-  </style>
 </head>
 
 <body>
-  <section class="content">
-    <article class="question">
-      <h2>¿Tienes una cuenta?</h2>
-    </article>
-    <form action="" class="signup">
-      <h3>Crear cuenta</h3>
-      <input type="text" name="user-signup" id="user-signup" placeholder="Usuario">
-      <input type="text" name="email-signup" id="email-signup" placeholder="Correo electrónico">
-      <input type="password" name="password-signup" id="password-signup" placeholder="Contraseña">
-      <input type="password" name="password-signup2" id="password-signup2" placeholder="Confirmar contraseña">
-      <button>Crear cuenta</button>
-    </form>
-    <form action="" class="login">
-      <h3>Iniciar sesión</h3>
-      <input type="text" name="user" id="user" placeholder="Usuario">
-      <input type="password" name="password" id="password" placeholder="Contraseña">
-      <button>Iniciar sesión</button>
-    </form>
-  </section>
+  <header class="header" id="header">
+    <div class="logo" id="logo">
+      <h1>Greek</h1>
+      <h1><img src="assets/images/player.svg" alt="">Store</h1>
+    </div>
+    <nav class="menu">
+      <ol class="menu-principal">
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Inicio</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Hombres</p>
+            </div>
+          </div>
+          <ol class="sub-menu">
+            <li>
+              <p>elemento 1</p>
+            </li>
+            <li>
+              <p>elemento 2</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Mujeres</p>
+            </div>
+          </div>
+          <ol class="sub-menu">
+            <li>
+              <p>elemento 1</p>
+            </li>
+          </ol>
+
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Calzado</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Equipaciones</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-container icon-button">
+            <div class="helper">
+              <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Contacto</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <div class="menu-search">
+      <div class="lupa-container">
+        <img src="assets/images/search.svg" alt="">
+      </div>
+      <i class="icon-user"></i>
+      <i class="icon-cart"></i>
+      <div class="menu-button" id="menu-button">
+        <div class="line1" id="line1"></div>
+        <div class="line2" id="line2"></div>
+        <div class="line3" id="line3"></div>
+      </div>
+    </div>
+  </header>
+  <form class="search-container" action="">
+    <input class="search" type="text" />
+  </form>
+  <aside class="menu-lateral" id="menu-lateral">
+    <nav>
+      <ol class="menu-principal-lateral">
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-home3"></i>
+              <p>Inicio</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+          <ol class="sub-menu-lateral">
+            <li>
+              <p>elemento 1</p>
+            </li>
+            <li>
+              <p>elemento 2</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+          </ol>
+        </li>
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-male"></i>
+              <p>Hombres</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+          <ol class="sub-menu-lateral">
+            <li>
+              <p>elemento 1</p>
+            </li>
+            <li>
+              <p>elemento 2</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+            <li>
+              <p>elemento 3</p>
+            </li>
+          </ol>
+        </li>
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-female"></i>
+              <p>Mujeres</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+          <ol class="sub-menu-lateral">
+            <li>
+              <p>elemento 1</p>
+            </li>
+          </ol>
+        </li>
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-sports-shoe"></i>
+              <p>Calzado</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+        </li>
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-t-shirt"></i>
+              <p>Equipaciones</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+        </li>
+        <li class="item-menu-principal-lateral">
+          <div class="item-container-lateral">
+            <div class="helper-lateral">
+              <i class="icon-phone"></i>
+              <p>Contacto</p>
+            </div>
+            <i class="icon-keyboard_arrow_right"></i>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </aside>
+  <div class="page-content">
+    <section class="content">
+      <article class="question">
+        <h2>¿Tienes una cuenta?</h2>
+      </article>
+      <!--
+      <form action="" class="signup">
+        <h3>Crear cuenta</h3>
+        <input type="text" name="user-signup" id="user-signup" placeholder="Usuario">
+        <input type="text" name="email-signup" id="email-signup" placeholder="Correo electrónico">
+        <input type="password" name="password-signup" id="password-signup" placeholder="Contraseña">
+        <input type="password" name="password-signup2" id="password-signup2" placeholder="Confirmar contraseña">
+        <button>Crear cuenta</button>
+      </form>
+      -->
+      <form action="" class="login">
+        <h3>Iniciar sesión</h3>
+        <input type="text" name="user" id="user" placeholder="Usuario">
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <button>Iniciar sesión</button>
+      </form>
+    </section>
+  </div>
+  <footer id="footer" class="footer">
+    <div class="footer-up">
+      <div class="footer-container">
+        <div class="footer-up-left">
+          <a href="">
+            <i class="icon-location2"></i>
+            <span>Calle 12a #13-41 Barzal</span>
+          </a>
+          <a href="">
+            <i class="icon-envelope"></i>
+            <span>Contáctanos al email </span>
+          </a>
+          <a href="">
+            <i class="icon-phone"></i>
+            <span>Llámanos al 49219291</span>
+          </a>
+        </div>
+        <div class="footer-up-right">
+          <h2>¿Quienes somos?</h2>
+          <p>Greek Store es tu tienda local deportiva en donde podrás encontrar
+            todo lo relacionado al deporte incluyendo
+            las equipaciones de tus equipos favoritos</p>
+          <h3>Sigue nuestras redes sociales</h3>
+          <div class="social-networks">
+            <a href="">
+              <i class="icon-instagram"></i>
+            </a>
+            <a href="">
+              <i class="icon-twitter"></i>
+            </a>
+            <a href="">
+              <i class="icon-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-down">
+      <div class="footer-container">
+        <p>Greek Store Villavicencio, Colombia</p>
+        <p>Copyright 2019, desarrollado por <strong>SogavSoft</strong></p>
+      </div>
+    </div>
+  </footer>
 </body>
+
+<link rel="stylesheet" href="src/css/base-styles.css">
+<link rel="stylesheet" href="src/css/login.css">
+<link rel="stylesheet" href="src/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
+<script src="src/js/base.js"></script>
 
 </html>
