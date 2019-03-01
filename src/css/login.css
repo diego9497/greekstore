@@ -49,7 +49,7 @@
       font-size: 1em;
       margin-top: 15px;
     }
-    .login{
+    .login, .signup{
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -63,30 +63,33 @@
       flex-direction: column;
       align-items: center;
       box-sizing: border-box;
-    padding: 0 15px;
-    line-height: 1.2em;
-    text-align: center;
+      padding: 0 15px;
+      line-height: 1.2em;
+      text-align: center;
     }
-    .alternative-option button{
+    .alternative-option a{
       width: 80%;
       height: 45px;
       background: white;
       border: 2px solid #363738;
       margin-bottom: 25px;
+      text-decoration: none;
+      color: #141414;
+      line-height: 45px;
     }
     .alternative-option h4{
       margin: 15px 0;
     }
-    .login-signup input, .login-signup button, .login-signup, .alternative-option{
+    .login-signup input, .login-signup button, .login-signup a, .login-signup, .alternative-option{
       border-radius: 4px;
     }
-    .login-signup button{
+    .login-signup button, .login-signup a{
       font-size: 16px;
       font-weight: bold;
     }
 @media screen and (max-width:561px){
   .login-signup{
-    margin: 105px 10px 40px 10px;
+    margin: 25px 10px 40px 10px;
     padding-top: 25px;
   }
   .page-content{
