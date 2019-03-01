@@ -1,43 +1,3 @@
-/*const menu = document.getElementById('menu')
-const header = document.getElementById('header')
-const hero = document.getElementById('hero')
-const olas = document.getElementById('olas')
-const footer = document.getElementById('footer')
-
-menuChange = e => {
-  if (document.documentElement.scrollTop >= hero.clientHeight) {
-    menu.classList.add('fixed')
-    header.classList.add('border')
-    olas.classList.remove('hide')
-  } else {
-    menu.classList.remove('fixed')
-    olas.classList.add('hide')
-    header.classList.remove('border')
-  }
-  const abajo = document.documentElement.scrollHeight - window.innerHeight - document.documentElement.scrollTop
-  if (abajo <= footer.clientHeight) {
-    olas.classList.add('hide')
-    menu.style.top = "initial"
-    menu.style.bottom = `${footer.clientHeight - abajo}px`
-  } else {
-    olas.classList.remove('hide')
-    menu.setAttribute('style', null)
-  }
-}
-function desktopVersion(media) {
-  if (media.matches) {
-    document.addEventListener('scroll', menuChange)
-  } else {
-    document.removeEventListener('scroll', menuChange);
-    menu.classList.remove('fixed')
-    olas.classList.add('hide')
-  }
-}
-
-let media = window.matchMedia("(min-width: 1025px)")
-desktopVersion(media);
-media.addListener(desktopVersion);
-*/
 
 let uno = {
   jpg: "./assets/images/hero-1.jpg",
@@ -108,22 +68,3 @@ changeImages = () => {
 
 
 
-// botones menu-lateral
-const botonesMenu = document.querySelectorAll('.menu-principal-lateral .item-menu-principal-lateral')
-botonesMenu.forEach(element => {
-  element.addEventListener('click', () => {
-    element.querySelector('ol').classList.toggle('show-sub-menu-lateral')
-  })
-});
-
-const menuButton = document.getElementById('menu-button');
-const menuLateral = document.getElementById('menu-lateral');
-const line1 = document.getElementById('line1')
-const line2 = document.getElementById('line2')
-const line3 = document.getElementById('line3')
-menuButton.addEventListener('click', () => {
-  line1.classList.toggle('menu-button-line1')
-  line2.classList.toggle('menu-button-line2')
-  line3.classList.toggle('menu-button-line3')
-  menuLateral.classList.toggle('show-menu-lateral')
-})

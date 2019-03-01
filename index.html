@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  
   <header class="header" id="header">
     <div class="logo" id="logo">
       <h1>Greek</h1>
@@ -93,36 +94,9 @@
       </div>
     </div>
   </header>
-  <form action="" class="search-bar">
-    <input type="text" name="search" id="search">
-    <button><i class="icon-search"></i></button>
-  </form>
-  <section class="hero" id="hero">
-    <picture class="img-behind" id="img-behind">
-      <source srcset="./assets/images/hero-1.webp" type="image/webp">
-      <img src="./assets/images/hero-1.jpg" alt="">
-    </picture>
-    <picture class="img-top" id="img-top">
-      <source srcset="" type="image/webp">
-      <img src="" alt="">
-    </picture>
-    <div class="hero-info" id="hero-info">
-      <div class="hero-info-container">
-        <p class="hero-tag">Zápatos</p>
-        <p class="hero-title">Titulo acá</p>
-        <p class="hero-description">Descripción del producto o campaña</p>
-        <button class="hero-button">Ver más</button>
-      </div>
-      <div class="controls">
-        <div class="previous" id="previous">Anterior</div>
-        <div class="next" id="next">Siguiente</div>
-      </div>
-    </div>
-  </section>
   <form class="search-container" action="">
     <input class="search" type="text" />
   </form>
-
   <aside class="menu-lateral" id="menu-lateral">
     <nav>
       <ol class="menu-principal-lateral">
@@ -213,155 +187,182 @@
       </ol>
     </nav>
   </aside>
-
-  <section class="lastest">
-
-    <h2 class="section-title">Más recientes</h2>
-    <div class="lastest-arrivals">
-
-      <div class="lastest-arrivals-product lap1">
-        <picture class="lastest-arrivals-product-picture">
-          <source srcset="./assets/images/running-hero.webp" type="image/webp">
-          <img class="lastest-arrivals-product-img" src="./assets/images/runnig-hero.jpg" alt="Imagen producto">
-        </picture>
-        <div class="lastest-arrivals-product-info">
-          <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-          <button class="lastest-arrivals-product-info-button">Ver producto</button>
+  
+  <!-- Inicio contenido dinámico -->
+  
+  <div class="page-content">
+    <section class="hero" id="hero">
+      <picture class="img-behind" id="img-behind">
+        <source srcset="./assets/images/hero-1.webp" type="image/webp">
+        <img src="./assets/images/hero-1.jpg" alt="">
+      </picture>
+      <picture class="img-top" id="img-top">
+        <source srcset="" type="image/webp">
+        <img src="" alt="">
+      </picture>
+      <div class="hero-info" id="hero-info">
+        <div class="hero-info-container">
+          <p class="hero-tag">Zápatos</p>
+          <p class="hero-title">Titulo acá</p>
+          <p class="hero-description">Descripción del producto o campaña</p>
+          <button class="hero-button">Ver más</button>
+        </div>
+        <div class="controls">
+          <div class="previous" id="previous">Anterior</div>
+          <div class="next" id="next">Siguiente</div>
         </div>
       </div>
-      <div class="lastest-arrivals-product lap2">
-        <picture class="lastest-arrivals-product-picture">
-          <source srcset="./assets/images/duque-hero.webp" type="image/webp">
-          <img class="lastest-arrivals-product-img" src="./assets/images/duque-hero.jpg" alt="Imagen producto">
-        </picture>
-        <div class="lastest-arrivals-product-info">
-          <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-          <button class="lastest-arrivals-product-info-button">Ver producto</button>
-        </div>
-      </div>
-      <div class="lastest-arrivals-product lap3">
-        <picture class="lastest-arrivals-product-picture">
-          <source srcset="./assets/images/zapato-hero.webp" type="image/webp">
-          <img class="lastest-arrivals-product-img" src="./assets/images/zapato-hero.jpg" alt="Imagen producto">
-        </picture>
-        <div class="lastest-arrivals-product-info">
-          <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-          <button class="lastest-arrivals-product-info-button">Ver producto</button>
-        </div>
-      </div>
-      <div class="lastest-arrivals-product lap4">
-        <picture class="lastest-arrivals-product-picture">
-          <source srcset="./assets/images/hero-2.webp" type="image/webp">
-          <img class="lastest-arrivals-product-img" src="./assets/images/hero-2.jpg" alt="Imagen producto">
-        </picture>
-        <div class="lastest-arrivals-product-info">
-          <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-          <button class="lastest-arrivals-product-info-button">Ver producto</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    <section class="lastest">
 
-  <section class="content">
+      <h2 class="section-title">Más recientes</h2>
+      <div class="lastest-arrivals">
 
-    <div class="suggestion">
-      <h2 class="section-title">Recomendados para ti</h2>
-      <p class="suggestion-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore
-        magna aliqua.
-      </p>
-      <div class="suggestion-products">
-        <div class="suggestion-product">
-          <figure class="card-image-container">
-            <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
-            <div class="card-view-container">
-              <div class="card-view"> <i class="icon-search"></i>Ver</div>
-            </div>
-          </figure>
-          <div class="card-info">
-            <p class="card-category">Camisa</p>
-            <p class="card-title">Camisa adidas</p>
-            <div class="card-bottom">
-              <p class="card-price">$20.0</p>
-              <p class="card-rating">
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-empty"></i>
-              </p>
-            </div>
+        <div class="lastest-arrivals-product lap1">
+          <picture class="lastest-arrivals-product-picture">
+            <source srcset="./assets/images/running-hero.webp" type="image/webp">
+            <img class="lastest-arrivals-product-img" src="./assets/images/runnig-hero.jpg" alt="Imagen producto">
+          </picture>
+          <div class="lastest-arrivals-product-info">
+            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
+            <button class="lastest-arrivals-product-info-button">Ver producto</button>
           </div>
         </div>
-        <div class="suggestion-product">
-          <figure class="card-image-container">
-            <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
-            <div class="card-view-container">
-              <div class="card-view"> <i class="icon-search"></i>Ver</div>
-            </div>
-          </figure>
-          <div class="card-info">
-            <p class="card-category">Camisa</p>
-            <p class="card-title">Camisa adidas</p>
-            <div class="card-bottom">
-              <p class="card-price">$20.0</p>
-              <p class="card-rating">
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-half"></i>
-                <i class="icon-star-empty"></i>
-                <i class="icon-star-empty"></i>
-              </p>
-            </div>
+        <div class="lastest-arrivals-product lap2">
+          <picture class="lastest-arrivals-product-picture">
+            <source srcset="./assets/images/duque-hero.webp" type="image/webp">
+            <img class="lastest-arrivals-product-img" src="./assets/images/duque-hero.jpg" alt="Imagen producto">
+          </picture>
+          <div class="lastest-arrivals-product-info">
+            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
+            <button class="lastest-arrivals-product-info-button">Ver producto</button>
           </div>
         </div>
-        <div class="suggestion-product">
-          <figure class="card-image-container">
-            <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
-            <div class="card-view-container">
-              <div class="card-view"> <i class="icon-search"></i>Ver</div>
-            </div>
-          </figure>
-          <div class="card-info">
-            <p class="card-category">Camisa</p>
-            <p class="card-title">Camisa adidas</p>
-            <div class="card-bottom">
-              <p class="card-price">$20.0</p>
-              <p class="card-rating">
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-              </p>
-            </div>
+        <div class="lastest-arrivals-product lap3">
+          <picture class="lastest-arrivals-product-picture">
+            <source srcset="./assets/images/zapato-hero.webp" type="image/webp">
+            <img class="lastest-arrivals-product-img" src="./assets/images/zapato-hero.jpg" alt="Imagen producto">
+          </picture>
+          <div class="lastest-arrivals-product-info">
+            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
+            <button class="lastest-arrivals-product-info-button">Ver producto</button>
           </div>
         </div>
-        <div class="suggestion-product">
-          <figure class="card-image-container">
-            <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
-            <div class="card-view-container">
-              <div class="card-view"> <i class="icon-search"></i>Ver</div>
-            </div>
-          </figure>
-          <div class="card-info">
-            <p class="card-category">Camisa</p>
-            <p class="card-title">Camisa adidas</p>
-            <div class="card-bottom">
-              <p class="card-price">$20.0</p>
-              <p class="card-rating">
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-full"></i>
-                <i class="icon-star-half"></i>
-              </p>
-            </div>
+        <div class="lastest-arrivals-product lap4">
+          <picture class="lastest-arrivals-product-picture">
+            <source srcset="./assets/images/hero-2.webp" type="image/webp">
+            <img class="lastest-arrivals-product-img" src="./assets/images/hero-2.jpg" alt="Imagen producto">
+          </picture>
+          <div class="lastest-arrivals-product-info">
+            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
+            <button class="lastest-arrivals-product-info-button">Ver producto</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="content">
+
+      <div class="suggestion">
+        <h2 class="section-title">Recomendados para ti</h2>
+        <p class="suggestion-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor
+          incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <div class="suggestion-products">
+          <div class="suggestion-product">
+            <figure class="card-image-container">
+              <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
+              <div class="card-view-container">
+                <div class="card-view"> <i class="icon-search"></i>Ver</div>
+              </div>
+            </figure>
+            <div class="card-info">
+              <p class="card-category">Camisa</p>
+              <p class="card-title">Camisa adidas</p>
+              <div class="card-bottom">
+                <p class="card-price">$20.0</p>
+                <p class="card-rating">
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-empty"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="suggestion-product">
+            <figure class="card-image-container">
+              <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
+              <div class="card-view-container">
+                <div class="card-view"> <i class="icon-search"></i>Ver</div>
+              </div>
+            </figure>
+            <div class="card-info">
+              <p class="card-category">Camisa</p>
+              <p class="card-title">Camisa adidas</p>
+              <div class="card-bottom">
+                <p class="card-price">$20.0</p>
+                <p class="card-rating">
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-half"></i>
+                  <i class="icon-star-empty"></i>
+                  <i class="icon-star-empty"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="suggestion-product">
+            <figure class="card-image-container">
+              <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
+              <div class="card-view-container">
+                <div class="card-view"> <i class="icon-search"></i>Ver</div>
+              </div>
+            </figure>
+            <div class="card-info">
+              <p class="card-category">Camisa</p>
+              <p class="card-title">Camisa adidas</p>
+              <div class="card-bottom">
+                <p class="card-price">$20.0</p>
+                <p class="card-rating">
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="suggestion-product">
+            <figure class="card-image-container">
+              <img class="card-image" src="assets/images/chaqueta-hombre-cuero.webp" alt="Imagen producto">
+              <div class="card-view-container">
+                <div class="card-view"> <i class="icon-search"></i>Ver</div>
+              </div>
+            </figure>
+            <div class="card-info">
+              <p class="card-category">Camisa</p>
+              <p class="card-title">Camisa adidas</p>
+              <div class="card-bottom">
+                <p class="card-price">$20.0</p>
+                <p class="card-rating">
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-full"></i>
+                  <i class="icon-star-half"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
   <footer id="footer" class="footer">
     <div class="footer-up">
       <div class="footer-container">
@@ -384,7 +385,7 @@
           <p>Greek Store es tu tienda local deportiva en donde podrás encontrar
             todo lo relacionado al deporte incluyendo
             las equipaciones de tus equipos favoritos</p>
-          <h3>Sigue nuestra redes sociales</h3>
+          <h3>Sigue nuestras redes sociales</h3>
           <div class="social-networks">
             <a href="">
               <i class="icon-instagram"></i>
@@ -407,12 +408,14 @@
       </div>
     </div>
   </footer>
-
+  
 </body>
-<link rel="stylesheet" href="src/css/index.css">
-<link rel="stylesheet" href="src/css/style.css">
+<link rel="stylesheet" href="src/css/base-styles.css"> <!-- Estilos para toda la pagina, header, menu, menu mobile, footer-->
+<link rel="stylesheet" href="src/css/index.css">  <!-- Estilos sección home -->
+<link rel="stylesheet" href="src/css/style.css"> <!-- Estilos para añadir iconos fuente-->
 <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
-<script src="src/js/index.js"></script>
+<script src="src/js/index.js"></script> <!-- JavaScript sección home , hero, carrousel -->
+<script src="src/js/base.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
 
 </html>
