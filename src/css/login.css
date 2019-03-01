@@ -1,21 +1,15 @@
-    .content {
+    .login-signup {
+      background: white;
       justify-content: center;
-      width: 100%;
-      padding-top: 25px;
-      padding-bottom: 40px;
-    }
-    .login,
-    .signup {
+      margin: 25px auto 40px auto;
       max-width: 540px;
-      margin:0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 35px 0px;
+      padding-top: 35px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
-
-    .content form input {
+    .login-signup form input {
       width: 80%;
       height: 45px;
       padding-left: 20px;
@@ -24,17 +18,18 @@
       border: 1px solid lightgray;
       outline: none;
     }
-
-    .content form input:focus {
+    .login-signup form input:focus {
       border: 1px solid #2196F3;
+      border: 1px solid #363738;
       border-left: 10px solid #2196F3;
+      border-left: 10px solid #363738;
       padding-left: 10px;
     }
     #user,
     #user-signup {
       margin-top: 30px;
     }
-    .content form h3 {
+    .login-signup form h3 {
       font-family: 'Amaranth';
       margin: 0;
       text-transform: uppercase;
@@ -45,13 +40,59 @@
       width: 80%;
       border-bottom: .5px solid lightgray;
     }
-
-    .content form button {
+    .login-signup form button {
       width: 80%;
       height: 45px;
-      background: #2196F3;
+      background: #363738;
       border: none;
       color: white;
       font-size: 1em;
       margin-top: 15px;
     }
+    .login{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+    .alternative-option{
+      background: #F9F7F6;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    padding: 0 15px;
+    line-height: 1.2em;
+    text-align: center;
+    }
+    .alternative-option button{
+      width: 80%;
+      height: 45px;
+      background: white;
+      border: 2px solid #363738;
+      margin-bottom: 25px;
+    }
+    .alternative-option h4{
+      margin: 15px 0;
+    }
+    .login-signup input, .login-signup button, .login-signup, .alternative-option{
+      border-radius: 4px;
+    }
+    .login-signup button{
+      font-size: 16px;
+      font-weight: bold;
+    }
+@media screen and (max-width:561px){
+  .login-signup{
+    margin: 25px 10px 40px 10px;
+    padding-top: 25px;
+  }
+  .page-content{
+    padding: 10px 0 10px 0;
+  }
+  .login-signup form h3 {
+    font-size: 1.4em;
+  }
+}

@@ -28,7 +28,7 @@ body{
   background: #F9F7F6;
   font-family: 'Titillium Web', sans-serif;
 }
-p,h2,figure{
+p,h2,h3,h4,figure{
   margin:0;
   padding: 0;
 }
@@ -325,6 +325,7 @@ ol{
 
 .page-content{
   margin-top: 80px;
+  padding: 25px 0 40px 0;
 }
 
 .footer{
