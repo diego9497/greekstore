@@ -325,7 +325,6 @@ ol{
 
 .page-content{
   margin-top: 80px;
-  padding: 25px 0 40px 0;
 }
 
 .footer{
@@ -380,11 +379,11 @@ ol{
 }
 .footer-up-right h2{
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin: 21px 0 12px 0;
 }
 .footer-up-right h3{
-  font-size: 1.1em;
+  font-size: 1.05em;
   margin-bottom: 0px;
 }
 .footer-up-right p{

@@ -1,7 +1,7 @@
     .login-signup {
       background: white;
       justify-content: center;
-      margin: 25px auto 40px auto;
+      margin: 105px auto 40px auto;
       max-width: 540px;
       display: flex;
       flex-direction: column;
@@ -86,7 +86,7 @@
     }
 @media screen and (max-width:561px){
   .login-signup{
-    margin: 25px 10px 40px 10px;
+    margin: 105px 10px 40px 10px;
     padding-top: 25px;
   }
   .page-content{
