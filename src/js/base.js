@@ -51,3 +51,4 @@ iconSearchUp.addEventListener('animationend', (e) => {
     iconSearchUp.classList.remove('lupa-container-search-move-2')
   }
 })
+
