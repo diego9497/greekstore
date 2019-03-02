@@ -22,8 +22,11 @@ const iconSearchUp = document.getElementById('icon-search-up');
 const iconSearchDown = document.getElementById('icon-search-down');
 const searchContainer = document.getElementById('search-container');
 let contador = 0;
+searchContainer.classList.add('hide')
 lupaContainer.addEventListener('click', () => {
   if (contador === 0) {
+    searchContainer.classList.remove('hide')
+    searchContainer.classList.remove('hide')
     searchContainer.classList.remove('hide-search-bar')
     iconSearchUp.classList.add('lupa-container-search-move')
     contador++;
@@ -42,6 +45,7 @@ iconSearchUp.addEventListener('animationend', (e) => {
     iconSearchUp.classList.remove('lupa-container-search-move')
   }
   if (e.animationName === "lupa2") {
+    searchContainer.classList.add('hide')
     iconSearchUp.classList.remove('hide')
     iconSearchDown.classList.add('hide-icon')
     iconSearchUp.classList.remove('lupa-container-search-move-2')

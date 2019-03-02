@@ -241,6 +241,10 @@ ol{
   height: 80px;
   background: #141414;
 }
+.helper a, .sub-menu a, .helper-lateral a, .sub-menu-lateral a{
+  text-decoration: none;
+  color: white;
+}
 .border-menu{
   width: 9px;
   height: 25px;
