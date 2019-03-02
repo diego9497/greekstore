@@ -17,3 +17,33 @@ menuButton.addEventListener('click', () => {
   line3.classList.toggle('menu-button-line3')
   menuLateral.classList.toggle('show-menu-lateral')
 })
+const lupaContainer = document.getElementById('lupa-container');
+const iconSearchUp = document.getElementById('icon-search-up');
+const iconSearchDown = document.getElementById('icon-search-down');
+const searchContainer = document.getElementById('search-container');
+let contador = 0;
+lupaContainer.addEventListener('click', () => {
+  if (contador === 0) {
+    searchContainer.classList.remove('hide-search-bar')
+    iconSearchUp.classList.add('lupa-container-search-move')
+    contador++;
+  } else {
+    iconSearchUp.classList.remove('hide')
+    iconSearchDown.classList.add('hide-icon')
+    searchContainer.classList.add('hide-search-bar')
+    iconSearchUp.classList.add('lupa-container-search-move-2')
+    contador = 0;
+  }
+})
+iconSearchUp.addEventListener('animationend', (e) => {
+  if (e.animationName === "lupa") {
+    iconSearchUp.classList.add('hide')
+    iconSearchDown.classList.remove('hide-icon')
+    iconSearchUp.classList.remove('lupa-container-search-move')
+  }
+  if (e.animationName === "lupa2") {
+    iconSearchUp.classList.remove('hide')
+    iconSearchDown.classList.add('hide-icon')
+    iconSearchUp.classList.remove('lupa-container-search-move-2')
+  }
+})

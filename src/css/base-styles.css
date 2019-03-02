@@ -89,41 +89,84 @@ button{
   cursor: pointer;
 }
 .search-container{
-  justify-self: center;
+  display: flex;
   z-index: 999;
-  grid-row: 2/3;
-  grid-column: 1/-1;
-  width: 90%;
-  height: 60px;
-  background: rgba(255,255,255,.3);
-  display: none;
+  position: fixed;
+  top:80px;
+  right: 115px;
+  width: 270px;
+  height: 80px;
+  transform: translateY(0);
+  background: #202020;
   justify-content: center;
   align-items: center;
+  transition: transform .3s ease;
+  padding: 0 15px;
+}
+.hide-icon{
+  color: #303030;
+}
+.hide-search-bar{
+  transform: translateY(-80px);
 }
 .search{
   outline: none;
   border:none;
   border-radius: 0px;
-  color: black;
-  border-bottom: 1px solid black;
+  color: white;
+  border-bottom: 2px solid white;
   background: none;
   height: 30px;
   padding: 0  0  0 10px;
-  width: 80%;
+  width: 100%;
+}
+.search-container input::placeholder{
+  color: white;
+  font-size: 1.1em;
+}
+.search-button{
+  display: flex;
+  justify-content: flex-end;
+  border:none;
+  background: transparent;
+  color:white;
+  width: 70px;
+  height: 32px;
+  font-size: 19px;
+  padding: 0;
+  border-bottom:2px solid white;
+}
+#icon-search-down{
+  padding-right: 12.5px;
 }
 .lupa-container{
   cursor: pointer;
   display: flex;
   height: 100%;
   width: 75px;
+  color: white;
+  font-size: 19px;
   background:  rgba(255,255,255,.05);
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
-.lupa-container img{
-  width: 32px;
-  height: 32px;
+.lupa-container-search-move{
+  animation: lupa .4s ease forwards;
+}
+.lupa-container-search-move-2{
+  transform: translateY(80px);
+  animation: lupa2 .3s ease forwards;
+}
+@keyframes lupa{
+  to{
+    transform: translateY(80px);
+  }
+}
+@keyframes lupa2{
+  to{
+    transform: translateY(0);
+  }
 }
 .menu-button{
   display: none;
@@ -572,6 +615,9 @@ ol{
     align-items: center;
     padding-right: 20px;
   }
+  .search-container{
+    right: 83px;
+  }
   .icon-user, .icon-cart, .menu, .search-down input{
     display: none;
   }
@@ -617,6 +663,10 @@ ol{
   }
   .social-networks{
     margin: 10px auto 0 auto;
+  }
+  .search-container{
+    width: 250px;
+    right: 53px;
   }
 }
 
