@@ -736,6 +736,9 @@ ol{
   .logo h1 img{
     width: 32px;
   }
+  .search-container {
+    width: 210px;
+  }
 }
 
 @keyframes animation-icons{
