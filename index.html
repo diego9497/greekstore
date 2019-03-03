@@ -47,22 +47,22 @@
     <nav class="menu">
       <ol class="menu-principal">
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Inicio</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Hombres</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
           <ol class="sub-menu">
             <li>
               <a href="">
@@ -87,13 +87,13 @@
           </ol>
         </li>
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Mujeres</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
           <ol class="sub-menu">
             <li>
               <a href="">
@@ -104,31 +104,31 @@
 
         </li>
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Calzado</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Equipaciones</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <li>
-          <div class="item-container icon-button">
-            <div class="helper">
-              <a href="">
+          <a href="">
+            <div class="item-container icon-button">
+              <div class="helper">
                 <p style="font-family: 'Titillium Web';font-weight: 600;text-transform:uppercase;">Contacto</p>
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
       </ol>
     </nav>
@@ -136,8 +136,15 @@
       <div class="lupa-container" id="lupa-container">
         <i class="icon-search" id="icon-search-up"></i>
       </div>
-      <i class="icon-user"></i>
-      <i class="icon-cart"></i>
+      <div class="user-container">
+        <a class="icon-user" href="#"></a>
+        <div class="user-modal">
+          <a href="login.html">Iniciar sesión</a>
+          <p></p>
+          <a href="signup.html">Registrarse</a>
+        </div>
+      </div>
+      <a class="icon-cart" href="#"></a>
       <div class="menu-button" id="menu-button">
         <div class="line1" id="line1"></div>
         <div class="line2" id="line2"></div>
@@ -145,6 +152,7 @@
       </div>
     </div>
   </header>
+
   <form class="search-container hide-search-bar" action="" id="search-container">
     <input class="search" type="text" placeholder="¿Qué estás buscando?" name="search" />
     <button class="search-button"><i class="icon-search hide-icon" id="icon-search-down"></i></button>

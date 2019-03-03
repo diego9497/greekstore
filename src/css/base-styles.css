@@ -72,22 +72,64 @@ button{
   padding-right: 40px;
   box-sizing: border-box;
 }
+.user-container{
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .icon-user{
   color:white;
   font-size: 22px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding: 0 15px;
   cursor: pointer;
+  text-decoration: none;
+}
+.user-container:hover .user-modal{
+  display:flex;
+}
+.user-modal{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: .95em;
+    font-weight: 600;
+    top: 71.6px;
+    right: -44px;
+    width: 140px;
+    height: 120px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: white;
+    clip-path: polygon(0% 7%,43% 7%, 50% 0%, 58% 7%, 100% 7%, 100% 100%, 0% 100%);
+    transition: all .2s ease;
+}
+.user-modal a{
+  color: #141414;
+  text-decoration: none;
+}
+.user-modal p{
+  width: 100%;
+  border-top: 1px solid #141414;
+  margin:5px 0;
+}
+.user-modal a:hover{
+  text-decoration: underline;
 }
 .icon-cart{
   color:white;
   font-size: 22px;
-  padding-left: 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
+
 .search-container{
   display: flex;
   z-index: 999;
@@ -176,7 +218,6 @@ button{
   width: 28px;
   height: 21px;
   border-radius: 5px;
-  margin-left: 15px;
   padding-top:3px;
 }
 .line1, .line2 , .line3{
@@ -241,7 +282,7 @@ ol{
   height: 80px;
   background: #141414;
 }
-.helper a, .sub-menu a, .helper-lateral a, .sub-menu-lateral a{
+.helper a, .sub-menu a, .helper-lateral a, .sub-menu-lateral a, .menu-principal li a{
   text-decoration: none;
   color: white;
 }
@@ -620,9 +661,9 @@ ol{
     padding-right: 20px;
   }
   .search-container{
-    right: 83px;
+    right: 120px;
   }
-  .icon-user, .icon-cart, .menu, .search-down input{
+  .icon-cart, .menu, .search-down input{
     display: none;
   }
   .lupa-container{
@@ -670,7 +711,7 @@ ol{
   }
   .search-container{
     width: 250px;
-    right: 53px;
+    right: 90px;
   }
 }
 
