@@ -8,6 +8,7 @@
       align-items: center;
       padding-top: 35px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      position: relative;
     }
     .login-signup form input {
       width: 80%;
@@ -87,6 +88,39 @@
       font-size: 16px;
       font-weight: bold;
     }
+    .signup-help{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .signup-help:hover .help-content{
+      display: initial;
+    }
+    .help-icon{
+      display: flex;
+      color: #343A40;
+      font-family: 'Black Ops One';
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #343A40;
+      font-size: 19px;
+      cursor: help;
+    }
+    .help-content{
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      min-width: 490px;
+      background: rgba(255,255,255,0.95);
+      padding: 15px 20px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      box-sizing: border-box;
+      transition: all .4s ease-in-out;
+    }
 @media screen and (max-width:561px){
   .login-signup{
     margin: 25px 10px 40px 10px;
@@ -97,5 +131,18 @@
   }
   .login-signup form h3 {
     font-size: 1.4em;
+  }
+  .help-content{
+    min-width: 460px;
+  }
+}
+@media screen and (max-width:450px){
+  .help-content{
+    min-width: 350px;
+  }
+}
+@media screen and (max-width:400px){
+  .help-content{
+    min-width: 260px;
   }
 }
