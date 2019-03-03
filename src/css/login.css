@@ -42,6 +42,7 @@
       border-bottom: .5px solid lightgray;
     }
     .login-signup form button {
+      cursor: pointer;
       width: 80%;
       height: 45px;
       background: #363738;
@@ -120,6 +121,18 @@
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
       box-sizing: border-box;
       transition: all .4s ease-in-out;
+    }
+    .validacion{
+      display: flex;
+      width: 80%;
+    }
+    .validacion input{
+      width: 60%;
+    }
+    .validacion p{
+      width: 40%;
+      line-height: 1.2em;
+      color: #303030;
     }
 @media screen and (max-width:561px){
   .login-signup{
