@@ -727,6 +727,15 @@ ol{
   .footer-down{
     height: 70px;
   }
+  .header {
+    grid-template-columns: 155px 1fr;
+  }
+  .logo h1{
+    font-size: 1.5em;
+  }
+  .logo h1 img{
+    width: 32px;
+  }
 }
 
 @keyframes animation-icons{
