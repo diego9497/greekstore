@@ -476,16 +476,22 @@ ol{
 }
 .footer-up-right p{
   font-size: .9em;
-  line-height: .9em;
+  line-height: 1em;
   color: lightgray;
+  margin-bottom: 10px;
 }
 .footer-down .footer-container{
   justify-content: space-between;
 }
+.footer-down .footer-container p:last-child{
+  text-align: right;
+}
 .footer-up{
-  background:#141414;
+  background: #141414;
   width: 100%;
-  height: 230px;
+  height: 280px;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 .social-networks{
   margin-top: 10px;
@@ -498,10 +504,10 @@ ol{
   width: 100%;
   height: 50px;
   color: #ccc;
-  padding-top: 10px;
-  padding-left: 25px;
+  padding: 10px 25px 10px;
   font-size: .8em;
   box-sizing: border-box;
+  line-height: 1.1em;
 }
 /* Añadidas con js */
 .color{
@@ -702,6 +708,9 @@ ol{
     margin-top: 0;
     text-align: center;
   }
+  .footer-up-right p{
+    text-align: center;
+  }
   .footer-up-right h3{
     margin-top: 0;
     text-align: center;
@@ -712,6 +721,11 @@ ol{
   .search-container{
     width: 250px;
     right: 90px;
+  }
+}
+@media screen and (max-width:370px){
+  .footer-down{
+    height: 70px;
   }
 }
 
