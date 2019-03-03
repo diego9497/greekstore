@@ -9,8 +9,14 @@ const infoContainer = document.querySelector('.hero-info-container')
 const controls = document.querySelector('.controls')
 const next = document.getElementById('next')
 const previous = document.getElementById('previous')
-let nextPrevious = true
 
+imgBehind.setAttribute('src', `${arreglo[1].jpg}`)
+imgBehindSource.setAttribute('srcset', `${arreglo[1].webp}`)
+infoContainer.children[0].innerText = arreglo[1].tag
+infoContainer.children[1].innerText = arreglo[1].titulo
+infoContainer.children[2].innerText = arreglo[1].descripcion
+
+let nextPrevious = true
 let indiceUno = 1
 let indiceDos = 2
 let tamanoArreglo = 0;
