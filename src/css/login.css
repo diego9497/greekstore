@@ -51,6 +51,10 @@
       font-size: 1em;
       margin-top: 15px;
     }
+    .login-signup form button:disabled{
+      background: #767778 ;
+      cursor: no-drop;
+    }
     .login, .signup{
       display: flex;
       width: 100%;
