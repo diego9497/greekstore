@@ -1,0 +1,225 @@
+.page-content{
+  display: flex;
+  max-width: 1180px;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 20px 0px;
+}
+.filters{
+  width: 350px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: white;
+}
+.filters h2{
+  font-size: 1.6em;
+}
+.menu-filter{
+  display: flex;
+  flex-direction: column;
+}
+.menu-filter-element-container{
+  width: 100%;
+}
+.menu-filter-options{
+  transition: all .2s ease-in-out;
+}
+.menu-filter-element{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.menu-filter-element i{
+  transition: transform .2s ease;
+  transform: rotate(-90deg);
+}
+/* Checkbox */ 
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  background-color: #4D5257;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.results{
+  width: 100%;
+  padding: 0 10px 20px;
+  box-sizing: border-box;
+}
+.controls{
+  height: 60px;
+  width: 100%;
+  background: white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sort{
+  height: 30px;
+  padding-left: 10px;
+}
+.searched-word{
+  font-size: 1.1em;
+  color: #343A40;
+}
+.products{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: dense;
+  grid-gap: 7px;
+}
+.product{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s ease-in;
+  cursor: pointer;
+}
+.product:hover .card-view-container{
+  display: flex;
+  opacity: 1;
+}
+.card-image-container{
+  margin: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+.card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid #343A40;
+  transition: all .9s ease;
+}
+.card-view-container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.28);
+  opacity: 0;
+  transition: all .5s ease;
+}
+.card-view{
+  width:55px;
+  font-weight: 600;
+  padding: 0 15px;
+  text-transform: uppercase;
+  height: 40px;
+  background: #23272B;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  line-height: 1em;
+}
+.card-category{
+  font-size: 0.9em;
+  font-weight: 200;
+  padding-bottom: 7px;
+  line-height: 1em;
+}
+.card-title{
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  line-height: 1em;
+}
+.card-bottom{
+  display: flex;
+  justify-content: space-between;
+  padding-top:7px;
+}
+.card-price, .card-rating{
+  line-height: 1em;
+  font-size: 0.85em;
+}
+.card-rating{
+  color:#98989A;
+}
+.hide-options{
+  display:none;
+}
+.rotate{
+  transform: rotate(90deg) !important;
+}
