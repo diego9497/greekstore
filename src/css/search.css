@@ -1,18 +1,29 @@
 .page-content{
-  display: flex;
+  display: grid;
   max-width: 1180px;
   margin-left:auto;
   margin-right:auto;
+  grid-template-columns: 276px 1fr; 
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "filtros controles"
+                       "filtros resultados";
   padding: 20px 0px;
 }
 .filters{
-  width: 350px;
+  grid-area: filtros;
+  /* width: 30px; */
   padding: 10px 20px;
   box-sizing: border-box;
   background: white;
 }
 .filters h2{
   font-size: 1.6em;
+  display: flex;
+  align-items: center;
+}
+.filters h2 i{
+  padding-right: 10px; 
+  font-size: 0.8em;
 }
 .menu-filter{
   display: flex;
@@ -105,26 +116,30 @@
 }
 
 .results{
+  grid-area: resultados;
   width: 100%;
   padding: 0 10px 20px;
   box-sizing: border-box;
 }
 .controls{
-  height: 60px;
-  width: 100%;
-  background: white;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    grid-area: controles;
+    background: white;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1em;
 }
 #sort{
   height: 30px;
   padding-left: 10px;
   border: none;
-  outline-color: lightgrey
+  outline-color: lightgrey;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .9em;
 }
 .searched-word{
   font-size: 1.1em;
@@ -227,3 +242,103 @@
 .rotate{
   transform: rotate(90deg) !important;
 }
+
+.price-range-block {
+    margin: 60px;
+  }
+
+  .sliderText {
+    width: 40%;
+    margin-bottom: 30px;
+    border-bottom: 2px solid red;
+    padding: 10px 0 10px 0px;
+    font-weight: bold;
+  }
+
+  .ui-slider-horizontal {
+    height: .6em;
+  }
+
+  .ui-slider-horizontal {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .ui-widget-header {
+    background: #23272B;
+  }
+  .price-range{
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 5px;
+    font-size: 0.9em;
+  }
+  .price-range-search {
+    width: 40.5%;
+    background-color: #f9f9f9;
+    border: 1px solid #6e6666;
+    min-width: 40%;
+    display: inline-block;
+    height: 32px;
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .price-range-field {
+    width: 20%;
+    min-width: 16%;
+    background-color: #f9f9f9;
+    border: 1px solid #6e6666;
+    color: black;
+    font-family: myFont;
+    font: normal 14px Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    height: 26px;
+    padding: 5px;
+  }
+  .search-results-block {
+    position: relative;
+    display: block;
+    clear: both;
+  }
+
+  @media screen and (max-width:860px){
+    .page-content{
+      grid-template-columns: 256px 1fr; 
+      grid-template-rows: 60px 1fr;
+    }
+  }
+  @media screen and (max-width:760px){
+    .page-content{
+      grid-template-columns: 1fr; 
+      grid-template-rows: 60px auto auto;
+      grid-template-areas: "controles"
+                           "filtros"
+                           "resultados";
+    }
+    .filters{
+      margin: 0 10px 10px 10px;
+    }
+    .filters h2 {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width:600px){
+    .page-content{
+      grid-template-rows: auto auto auto;
+    }
+    .sort-container{
+      margin-top: 10px;
+    }
+    .controls{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  .hide{
+    display: none;
+  }

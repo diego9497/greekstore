@@ -11,8 +11,12 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Greek Store</title>
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
 </head>
-
 
 <body>
 
@@ -255,54 +259,127 @@
 
   <!-- Inicio contenido dinámico -->
 
-  <div class="page-content">
-    <article class="filters">
-      <h2>Filtrar por</h2>
-      <ol class="menu-filter">
-        <li class="menu-filter-element-container">
-          <div class="menu-filter-element">
-            <p>Categoria</p><i class="icon-keyboard_arrow_right"></i>
-          </div>
-          <div class="menu-filter-options">
-            <label class="checkbox-container">Adidas
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="checkbox-container">Nike
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="checkbox-container">Umbro
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-          </div>
-        </li>
-        <li class="menu-filter-element-container">
-          <div class="menu-filter-element">
-            <p>Precio</p><i class="icon-keyboard_arrow_right"></i>
-          </div>
-          <div class="menu-filter-options">
-            <div id="slider-container"></div>
-          </div>
-        </li>
-      </ol>
+  <div class="page-content" id="page-content">
+    <div class="controls">
+      <h2 class="searched-word">Resultados para 'Palabra buscada'</h2>
+      <div class="sort-container">
+        <label> Ordenar por </label>
+        <select name="sort" id="sort">
+          <option value="">Mayor precio</option>
+          <option value="">Menor precio</option>
+          <option value="">Mejor valorado</option>
+          <option value="">Peor valorado valorado</option>
+        </select>
+      </div>
+    </div>
+    <article class="filters" id="filters">
+      <form action="index.html" method="get">
+        <h2 id="filter-button"><i class="icon-filter"></i>Filtrar por</h2>
+        <div id="menu-container">
+          <ol class="menu-filter" id="menu-filter">
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Marca</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <label class="checkbox-container">Adidas
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Nike
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Umbro
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </li>
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Categoria</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <label class="checkbox-container">Zapatos
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Camisas
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Sudaderas
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </li>
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Género</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <label class="checkbox-container">Hombre
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Mujer
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </li>
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Edad</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <label class="checkbox-container">Adultos
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Niños
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </li>
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Tallas</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <label class="checkbox-container">S
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">M
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">L
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </li>
+            <li class="menu-filter-element-container">
+              <div class="menu-filter-element">
+                <p>Precio</p><i class="icon-keyboard_arrow_right"></i>
+              </div>
+              <div class="menu-filter-options">
+                <p class="price-range"><span id="min">$0</span><span id="max">$100000</span></p>
+                <div id="slider-range" class="price-filter-range" name="rangeInput">
+
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </form>
     </article>
     <article class="results">
-      <div class="controls">
-        <h2 class="searched-word">Resultados para 'Palabra buscada'</h2>
-        <div class="sort-container">
-          <i class="icon-sort"></i>
-          <label> Ordenar por </label>
-          <select name="sort" id="sort">
-            <option value="">Mayor precio</option>
-            <option value="">Menor precio</option>
-            <option value="">Mejor valorado</option>
-            <option value="">Peor valorado valorado</option>
-          </select>
-        </div>
-      </div>
-
       <div class="products">
         <a href="product.html" class="product">
           <figure class="card-image-container">
@@ -578,34 +655,34 @@
               </p>
             </div>
           </div>
+        </a>
+        <a href="" class="product">
+          <figure class="card-image-container">
+            <picture>
+              <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
+              <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
+            </picture>
+            <div class="card-view-container">
+              <div class="card-view"> <i class="icon-search"></i>Ver</div>
+            </div>
+          </figure>
+          <div class="card-info">
+            <p class="card-category">Camisa</p>
+            <p class="card-title">Camisa adidas</p>
+            <div class="card-bottom">
+              <p class="card-price">$20.0</p>
+              <p class="card-rating">
+                <i class="icon-star-full"></i>
+                <i class="icon-star-full"></i>
+                <i class="icon-star-full"></i>
+                <i class="icon-star-full"></i>
+                <i class="icon-star-half"></i>
+              </p>
+            </div>
+          </div>
       </div>
-      <a href="" class="product">
-        <figure class="card-image-container">
-          <picture>
-            <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
-            <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
-          </picture>
-          <div class="card-view-container">
-            <div class="card-view"> <i class="icon-search"></i>Ver</div>
-          </div>
-        </figure>
-        <div class="card-info">
-          <p class="card-category">Camisa</p>
-          <p class="card-title">Camisa adidas</p>
-          <div class="card-bottom">
-            <p class="card-price">$20.0</p>
-            <p class="card-rating">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-half"></i>
-            </p>
-          </div>
-        </div>
-  </div>
-  </a>
-  </article>
+      </a>
+    </article>
 
   </div>
 
@@ -664,21 +741,25 @@
 <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
 <script src="src/js/base.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
 <script src="src/js/search.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
 
 <script>
-  $(".price-slider").slider({
+  const minimo = document.getElementById('min')
+  const maximo = document.getElementById('max')
+  $("#slider-range").slider({
     range: true,
+    orientation: "horizontal",
     min: 0,
-    max: 500,
-    values: [10, 500],
+    max: 10000,
+    values: [0, 10000],
+    step: 100,
     slide: function (event, ui) {
-      $(".price-value").text("£" + ui.values[0] + " - £" + ui.values[1]);
+      if (ui.values[0] == ui.values[1]) {
+        return false;
+      }
+      minimo.innerHTML = "$" + ui.values[0]
+      maximo.innerHTML = "$" + ui.values[1]
     }
   });
-  $(".price-value").text("£" + $(".price-slider").slider("values", 0) +
-    " - £" + $(".price-slider").slider("values", 1));
-
 
 </script>
 
