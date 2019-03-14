@@ -123,6 +123,8 @@
 #sort{
   height: 30px;
   padding-left: 10px;
+  border: none;
+  outline-color: lightgrey
 }
 .searched-word{
   font-size: 1.1em;
@@ -131,9 +133,9 @@
 .products{
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
   grid-auto-rows: dense;
-  grid-gap: 7px;
+  grid-gap: 20px;
 }
 .product{
   width: 100%;
@@ -142,6 +144,8 @@
   flex-direction: column;
   transition: all .3s ease-in;
   cursor: pointer;
+  text-decoration: none;
+  color:black;
 }
 .product:hover .card-view-container{
   display: flex;

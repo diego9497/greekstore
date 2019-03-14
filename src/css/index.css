@@ -171,6 +171,10 @@
   align-items: center;
   padding: 20px;
 }
+.lastest-arrivals-product-info-button a{
+  color:white;
+  text-decoration: none;
+}
 .lastest-arrivals-product-info-button{
   padding: 10px 20px;
   background: black;
@@ -237,9 +241,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.28); */
   transition: all .3s ease-in;
   cursor: pointer;
+  text-decoration: none;
+  color:black;
 }
 
 .suggestion-product:hover .card-view-container{
