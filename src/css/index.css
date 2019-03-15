@@ -184,6 +184,8 @@
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 .lastest-arrivals-product-info-button::after{
   content: "";

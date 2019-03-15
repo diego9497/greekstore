@@ -21,14 +21,14 @@ function modoMovil(x) {
     filterButton.addEventListener('click', esconderMostrar)
     menuFilter.forEach(element => {
       element.querySelector('.menu-filter-options').classList.add('hide-options')
-      element.querySelector('i').classList.toggle('rotate')
+      element.querySelector('i').classList.add('rotate')
     })
   } else {
     menuContainer.classList.remove("hide");
     filterButton.removeEventListener('click', esconderMostrar);
     menuFilter.forEach(element => {
       element.querySelector('.menu-filter-options').classList.remove('hide-options')
-      element.querySelector('i').classList.toggle('rotate')
+      element.querySelector('i').classList.remove('rotate')
     })
   }
 }
