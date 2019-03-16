@@ -220,6 +220,7 @@ body{
 }
 .comment{
   border-bottom: 1px solid gray;
+  margin-bottom: 40px;
 }
 .comment-title{
   text-transform: uppercase;
