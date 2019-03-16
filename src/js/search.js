@@ -27,8 +27,8 @@ function modoMovil(x) {
     menuContainer.classList.remove("hide");
     filterButton.removeEventListener('click', esconderMostrar);
     menuFilter.forEach(element => {
-      element.querySelector('.menu-filter-options').classList.remove('hide-options')
-      element.querySelector('i').classList.remove('rotate')
+      element.querySelector('.menu-filter-options').classList.add('hide-options')
+      element.querySelector('i').classList.add('rotate')
     })
   }
 }

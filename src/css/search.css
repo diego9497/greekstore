@@ -342,3 +342,18 @@
   .hide{
     display: none;
   }
+  .button{
+  text-transform: uppercase;
+    color: #141414;
+    border: 1px solid black;
+    height: 37px;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+    background: white;
+    outline: none;
+}
+.button:hover{
+  background: #141414;
+  color: white;
+}
