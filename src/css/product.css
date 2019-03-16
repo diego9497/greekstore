@@ -274,9 +274,6 @@ body{
   .product-tag{
     font-size: 0.85em;
   }
-  .product-image{
-    height: 350px;
-  }
   .product-information-title, .product-review-title {
     font-size: 2em;
     padding: 0 20px;
@@ -304,5 +301,10 @@ body{
                         "comments";
     max-width: 1024px;
     margin: 60px auto 0 auto;
+  }
+}
+@media screen and (max-width:620px){
+  .product-image{
+    height: 350px;
   }
 }
