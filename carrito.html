@@ -281,153 +281,72 @@
   <!-- Inicio contenido dinámico -->
 
   <div class="page-content">
-    <div class="product">
-      <picture class="product-image">
-        <source srcset="./assets/images/duque-hero.webp" type="image/webp">
-        <img src="./assets/images/duque-hero.jpg" alt="">
-      </picture>
-      <div class="product-info-top">
-        <p class="product-tag">Camisa</p>
-        <h2 class="product-title">Camisa Millonarios Local</h2>
-        <p class="product-helper">
-          <span class="product-price">$160000</span>
-          <span class="product-rating">
-            <i class="icon-star-full"></i>
-            <i class="icon-star-full"></i>
-            <i class="icon-star-full"></i>
-            <i class="icon-star-full"></i>
-            <i class="icon-star-empty"></i>
-          </span>
-        </p>
-      </div>
-      <div class="product-info-bottom">
-        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-        <form action="" method="get">
-          <div class="form-helper">
-            <div class="form-helper-container-left"">
-              <label for=" size">Elige tu talla</label> <br>
-              <select name="size" id="product-size" class="product-size">
-                <option value="X">X</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-              </select>
-            </div>
-            <div class="form-helper-container-rigth">
-              <label for="quantity">Cantidad</label><br>
-              <input type="number" name="" id="product-quantity" class="product-quantity" value="1" min="1">
+    <h2 class="page-content-title">Carrito de compras</h2>
+    <h4 class="page-content-subtitle">Tienes n elementos en tu carrito de compras</h4>
+    <div class="cart">
+      <div class="cart-items">
+        <div class="table-header">
+          <p>Item</p>
+          <p>Precio</p>
+          <p>Cantidad</p>
+          <p>Total</p>
+        </div>
+        <div class="table-item">
+          <div class="item">
+            <a href="product.html">
+              <img src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
+            </a>
+            <div class="item-detail">
+              <a href="product.html">
+                <h4 class="item-name">Chaqueta cuero hombre</h4>
+              </a>
+              <p class="item-size">Talla: M</p>
             </div>
           </div>
-          <a href="" class="product-button">Agregar al carrito</a>
-        </form>
-      </div>
-    </div>
-    <div class="product-information">
-      <h2 class="product-information-title">Detalles del producto</h2>
-    </div>
-    <div class="product-review">
-      <h2 class="product-review-title">Valoraciones y reseñas</h2>
-      <div class="product-review-rating">
-        <div class="general-rating">
-          <span class="big-number">4.5</span>
-          <p class="general-rating-helper">
-            <span class="product-rating">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-empty"></i>
-            </span><br>
-            <span><strong>10</strong> Comentarios</span>
-          </p>
-        </div>
-        <h3 class="rating-title">Detalle de la valoración</h3>
-        <div class="rating-bar-container"><strong>5 estrellas</strong>
-          <div class="rating-bar">
-            <div class="rating-bar-value" style="width: 50%"></div>
+          <p class="item-price">$102000</p>
+          <div class="quantity-container">
+            <button class="restar">-</button>
+            <input type="text" name="quantity" class="item-quantity" value="1">
+            <button class="sumar">+</button>
           </div>
-          <span>6</span>
+          <p class="item-total-price">$102000</p>
+          <a href="" class="delete-item">X</a>
         </div>
-        <div class="rating-bar-container"><strong>4 estrellas</strong>
-          <div class="rating-bar">
-            <div class="rating-bar-value" style="width: 25%"></div>
+        <div class="table-item">
+          <div class="item">
+            <a href="product.html">
+              <img src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
+            </a>
+            <div class="item-detail">
+              <a href="product.html">
+                <h4 class="item-name">Chaqueta cuero hombre</h4>
+              </a>
+              <p class="item-size">Talla: M</p>
+            </div>
           </div>
-          <span>2</span>
-        </div>
-        <div class="rating-bar-container"><strong>3 estrellas</strong>
-          <div class="rating-bar">
-            <div class="rating-bar-value" style="width: 25%"></div>
+          <p class="item-price">$102000</p>
+          <div class="quantity-container">
+            <button class="restar">-</button>
+            <input type="text" name="quantity" class="item-quantity" value="1">
+            <button class="sumar">+</button>
           </div>
-          <span>2</span>
-        </div>
-        <div class="rating-bar-container"><strong>2 estrellas</strong>
-          <div class="rating-bar">
-            <div class="rating-bar-value" style="width: 0%"></div>
-          </div>
-          <span>0</span>
-        </div>
-        <div class="rating-bar-container"><strong>1 estrellas</strong>
-          <div class="rating-bar">
-            <div class="rating-bar-value" style="width: 0%"></div>
-          </div>
-          <span>0</span>
+          <p class="item-total-price">$102000</p>
+          <a href="" class="delete-item">X</a>
         </div>
       </div>
-      <div class="product-review-comments">
-        <div class="comment">
-          <div class="rating-date">
-            <span class="product-rating">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-empty"></i>
-            </span>
-            <span class="date">Marzo 1, 2019</span>
-          </div>
-          <h4 class="comment-title">La camiseta más bonita del mundo!</h4>
-          <p class="comment-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo eaque.
-            Debitis exercitationem tempora perspiciatis corrupti sit similique, laboriosam esse voluptatibus quis
-            nostrum, iusto ex quidem quaerat iste, blanditiis modi!</p>
-          <p class="comment-user">Algo221 <span>- Comprador verificado</span></p>
-        </div>
-        <div class="comment">
-          <div class="rating-date">
-            <span class="product-rating">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-empty"></i>
-            </span>
-            <span class="date">Marzo 1, 2019</span>
-          </div>
-          <h4 class="comment-title">La camiseta más bonita del mundo!</h4>
-          <p class="comment-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo eaque.
-            Debitis exercitationem tempora perspiciatis corrupti sit similique, laboriosam esse voluptatibus quis
-            nostrum, iusto ex quidem quaerat iste, blanditiis modi!</p>
-          <p class="comment-user">Algo221 <span>- Comprador verificado</span></p>
-        </div>
-        <div class="comment">
-          <div class="rating-date">
-            <span class="product-rating">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-empty"></i>
-            </span>
-            <span class="date">Marzo 1, 2019</span>
-          </div>
-          <h4 class="comment-title">La camiseta más bonita del mundo!</h4>
-          <p class="comment-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo eaque.
-            Debitis exercitationem tempora perspiciatis corrupti sit similique, laboriosam esse voluptatibus quis
-            nostrum, iusto ex quidem quaerat iste, blanditiis modi!</p>
-          <p class="comment-user">Algo221 <span>- Comprador verificado</span></p>
-        </div>
+      <div class="navigation">
+        <a href="" class="back"><i class="icon-keyboard_arrow_right"></i>Continuar comprando</a>
+        <a href="" class="continue">Confirmar compra <i class="icon-keyboard_arrow_right"></i></a>
       </div>
-
+      <div class="cart-summary">
+        <h3 class="cart-summary-title">Resumen del pedido</h3>
+        <p class="cart-summary-description">Los costos adicionales son calculados en base a los valores de los
+          productos que ha seleccionado </p>
+        <div class="cart-summary-element"><span>Subtotal del pedido</span><span>$302020</span></div>
+        <div class="cart-summary-element"><span>Envio</span><span>$10000</span></div>
+        <div class="cart-summary-element"><span>Iva</span><span>$3020</span></div>
+        <div class="cart-summary-element"><span>Total</span><span>$314020</span></div>
+      </div>
     </div>
   </div>
 
@@ -480,10 +399,11 @@
 </body>
 <link rel="stylesheet" href="src/css/base-styles.css">
 <!-- Estilos para toda la pagina, header, menu, menu mobile, footer-->
-<link rel="stylesheet" href="src/css/product.css"> <!-- Estilos sección home -->
+<link rel="stylesheet" href="src/css/carrito.css"> <!-- Estilos sección home -->
 <link rel="stylesheet" href="src/css/style.css"> <!-- Estilos para añadir iconos fuente-->
 <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
 <script src="src/js/base.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
+<script src="src/js/carrito.js"></script>
 
 </html>
