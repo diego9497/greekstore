@@ -82,6 +82,9 @@ body{
   
 }
 .product-size, .product-quantity{
+  border-width: 1px;
+  border-color: black;
+  outline: none;
   height: 45px;
   padding: 0 10px;
   font-weight: 600;
@@ -223,6 +226,7 @@ body{
   margin-bottom: 40px;
 }
 .comment-title{
+  line-height: 1em;
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: bolder;
@@ -240,4 +244,65 @@ body{
 .comment-user span{
   font-weight: 400;
   color: gray;
+}
+
+@media screen and (max-width:1060px){
+  .product {
+    grid-template-columns: 55% 45%;
+  }
+}
+@media screen and (max-width:1060px){
+  .product {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: "infoTop"
+                         "imagen"
+                         "infoBottom";
+    padding: 0;
+  }
+  .product-info-top, .product-info-bottom{
+    padding: 20px 30px
+  }
+  .product-title{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  .product-helper{
+    font-size: 1.15em;
+    margin-bottom: 7px;
+  }
+  .product-tag{
+    font-size: 0.85em;
+  }
+  .product-image{
+    height: 350px;
+  }
+  .product-information-title, .product-review-title {
+    font-size: 2em;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .product-information {
+    margin: 30px auto 0 auto;
+  }
+  .product-review-rating, .product-review-comments{
+    padding: 0 30px;
+  }
+  .product-review-comments{
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width:760px){
+  .product-review {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "title"
+                        "ratings"
+                        "comments";
+    max-width: 1024px;
+    margin: 60px auto 0 auto;
+  }
 }
