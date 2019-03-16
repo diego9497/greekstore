@@ -6,13 +6,17 @@ body{
   margin:80px auto 0 auto;
 }
 .product{
-  display: flex;
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-template-rows: 2fr 3fr;
+  grid-template-areas: "imagen infoTop"
+                       "imagen infoBottom";
   color: #343A40;
   padding: 20px 15px 15px 0;
   box-sizing: border-box;
 }
 .product-image{
-  width: 50%;
+  grid-area: imagen;
   display: flex;
   background: #EBEDEE;
   height: 545px;
@@ -23,12 +27,19 @@ body{
   margin:0 auto;
   object-fit: cover;
 }
-.product-info{
-  width: 40%;
-  padding: 20px 30px 20px 70px;
+.product-info-top{
+  grid-area: infoTop;
+  padding: 20px 30px 0 70px;
+  box-sizing: border-box;
+  align-self: flex-end;
+}
+.product-info-bottom{
+  grid-area: infoBottom;
+  padding: 0 30px 20px 70px;
   box-sizing: border-box;
 }
 .product-title{
+  font-family: 'Amaranth';
   text-transform: uppercase;
   font-size: 2em;
   line-height: 1em;
@@ -36,8 +47,9 @@ body{
 }
 .product-tag{
   text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 200;
+  font-size: 0.95em;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 .product-rating{
   color:#343A40;
@@ -66,17 +78,165 @@ body{
   width: 100%;
 }
 .product-quantity{
-  width: 50%;
+  width: 100%;
   
 }
 .product-size, .product-quantity{
   height: 45px;
   padding: 0 10px;
   font-weight: 600;
+  box-sizing: border-box;
 }
-.form-helper-container-left, .form-helper-container-rigth{
-  width: 40%;
+.product-button{
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  color:white;
+  background: #141414;
+  position: relative;
+}
+.product-button:hover{
+  background: #444444 
+}                          
+.product-button::after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(3px, 3px);
+  box-shadow: inset 0 0 0 1px #141414;
+}
+.product-button:hover::after{
+  box-shadow: inset 0 0 0 1px #444444;
 }
 .form-helper-container-left{
+  width: 70%;
   margin-right: 20px;
+}
+.form-helper-container-rigth{
+  width: 30%;
+}
+.product-information{
+  max-width: 1024px;
+  margin:60px auto 0 auto;
+}
+.product-information-title, .product-review-title{
+  text-transform: uppercase;
+  font-size: 2.7em;
+  font-weight: bolder;
+  font-family: 'Amaranth';
+  margin-bottom: 30px;
+  color: #141414;
+}
+.product-review{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "title title"
+                       "ratings comments";
+  max-width: 1024px;
+  margin:60px auto 0 auto;
+}
+.product-review-title{
+  grid-area: title;
+  padding-bottom: 50px;
+}
+.product-review-rating{
+  grid-area: ratings;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+.product-review-comments{
+  grid-area: comments;
+}
+.general-rating{
+  background: #2ADA71;
+  height: 90px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.general-rating .product-rating{
+  color: black;
+  letter-spacing: -.4px;
+}
+.general-rating-helper{
+  font-size:.8em;
+}
+.big-number{
+  font-weight: bolder;
+  font-size: 3.6em;
+  margin-right: 7px;
+}
+.rating-title{
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-family: 'Amaranth';
+  margin-bottom: 15px;
+}
+.rating-bar-container{
+  text-transform: uppercase;
+  display: flex;  
+  align-items: center;
+  margin-bottom: 7px;
+}
+.rating-bar{
+  height: 3px;
+  width: calc(100% - 120px);
+  margin: 0 9px;
+  background: #D9DCDD;
+  position: relative;
+}
+.rating-bar-container span{
+  font-size: 0.73em;
+}
+.rating-bar-value{
+  height: 3px;
+  background: #2ADA71;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rating-date{
+  display: flex;
+  justify-content: space-between;
+}
+.rating-date .product-rating{
+  color: black;
+  letter-spacing: -.2px;
+}
+.date{
+  font-size: .9em;
+  color: gray;
+}
+.comment{
+  border-bottom: 1px solid gray;
+}
+.comment-title{
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bolder;
+  margin-bottom: 6px;
+}
+.comment-description{
+  line-height: 1.1em;
+  margin-bottom: 20px;
+}
+.comment-user {
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: 35px;
+}
+.comment-user span{
+  font-weight: 400;
+  color: gray;
 }
