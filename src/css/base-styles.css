@@ -669,7 +669,18 @@ ol{
   .search-container{
     right: 120px;
   }
-  .icon-cart, .menu, .search-down input{
+  .icon-cart {
+    position: fixed;
+    display: flex;
+    top:100px;
+    background: #141414aa;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu, .search-down input{
     display: none;
   }
   .lupa-container{
@@ -766,4 +777,96 @@ ol{
 }
 .show-menu-lateral{
   transform: translateX(0);
+}
+
+.cart-base{
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 1px;
+  width: 300px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.table-item-base{
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table-item-base:last-child{
+  border: none;
+}
+.item-base{
+  box-sizing: border-box;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+.item-base a img{
+  height: 70px;
+}
+.item-detail-base{
+  margin-left: 10px;
+}
+.item-price-base{
+  color: #141414;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+.item-total-price-base{
+  font-size: .85em;
+  text-transform: uppercase;
+  color: #868E96;
+}
+.table-item-base a{
+  text-decoration: none;
+  color: #212529;
+}
+.item-name-base{
+  font-size: .9em;
+  line-height: 1.1em;
+}
+.item-size-base{
+  font-size: .75em;
+  color: #464E56;
+}
+.delete-item-base{
+  font-weight: bolder;
+  font-family: cursive;
+}
+.delete-item-base:hover{
+  color:red;
+}
+.buy-button, .cart-button{
+  text-transform: uppercase;
+  transition: all .3s;
+}
+.buy-button{
+  border: 1px solid #141414;
+  height: 35px;
+  width: 40%;
+  color:#141414;
+  text-align: center;
+  line-height: 35px;
+  font-weight: bold;
+}
+.buy-button:hover{
+  color:white;
+  background: #141414;
+}
+.cart-button:hover{
+  transform: scale(1.03);
+}
+.cart-container{
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+.cart-container:hover .cart-base{
+  display: initial;
 }
