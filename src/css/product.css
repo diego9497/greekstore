@@ -101,6 +101,7 @@ body{
   color:white;
   background: #141414;
   position: relative;
+  border:none;
 }
 .product-button:hover{
   background: #444444 
@@ -307,4 +308,159 @@ body{
   .product-image{
     height: 350px;
   }
+  .modal-review{
+    width: 90%;
+  }
+}
+
+.modal-review-container{
+  position: fixed;
+  top: 80px;
+  left: 0;
+  height: calc(100vh - 80px);
+  width: 100%;
+  background: rgba(0,0,0,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  padding: 0 17px;
+  box-sizing: border-box;
+}
+.modal-review{
+  position: relative;
+  width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 45px 45px;
+  box-sizing: border-box;
+}
+.modal-title{
+  text-transform: uppercase;
+}
+.modal-subtitle{
+  margin-bottom: 35px;
+}
+.modal-element-container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.modal-element-label{
+  width: 30%;
+  text-align: right;
+  margin-right: 15px;
+  font-weight: bold;
+  color:#141414;
+  font-size: .9em;
+}
+.self-start{
+  align-self: flex-start;
+}
+.modal-comment, .modal-rating{
+  text-align: left;
+  width: 70%;
+}
+.modal-comment{
+  font-family: 'Titillium Web',sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  line-height: 1.2em;
+  font-size: .9em;
+  margin-bottom: 15px;
+}
+input[type = "radio"]{ 
+  display:none;
+}
+.icon-star{
+  font-size: 2em;
+}
+.modal-rating{
+  direction: rtl;/* right to left */
+  unicode-bidi: bidi-override;/* bidi de bidireccional */
+}
+.modal-rating label{
+  cursor: pointer;
+}
+.modal-star:hover .icon-star::before{
+  content: "\e9d9";
+}
+.modal-star:hover ~ .modal-star .icon-star::before{
+  content: "\e9d9";
+}
+input[type = "radio"]:checked ~ .modal-star{
+  color:#FFB500;
+}
+input[type = "radio"]:checked ~ .modal-star .icon-star::before{
+  content: "\e9d9";
+}
+.icon-star::before{
+  content: "\e9d7";
+  color: #FFB500;
+}
+@media screen and (max-width:450px){
+  .self-start{
+    align-self: center;
+  }
+  .modal-element-container{
+    flex-direction: column;
+  }
+  .modal-comment{
+    width: 100%;
+  }
+  .modal-rating{
+    text-align: center;
+    width: 100%;
+  }
+  .modal-subtitle{
+    margin-bottom: 20px;
+  }
+  .modal-title{
+    text-align: center;
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width:395px){
+  .modal-title{
+    font-size: 1.27em;
+  }
+  .modal-review{
+    padding: 20px 20px 25px;
+  }
+  .modal-element-container{
+    margin-bottom: 10px;
+  }
+  .modal-review .product-button{
+    font-size: .95em;
+  }
+  .modal-comment{
+    height: 80px;
+  }
+}
+.close-modal{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  transform: rotate(45deg);
+  font-weight: bolder;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  outline: none;
+}
+.form-modal{
+  width: 100%;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
 }

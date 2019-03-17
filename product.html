@@ -430,7 +430,36 @@
 
     </div>
   </div>
-
+  <div class="modal-review-container" id="modal">
+    <div class="modal-review">
+      <button class="close-modal" onclick="closeModal()">+</button>
+      <form action="" method="get" class="form-modal">
+        <h2 class="modal-title">Escribe una reseña</h2>
+        <p class="modal-subtitle">Sobre tu <strong>Nombre producto</strong></p>
+        <div class="modal-element-container">
+          <p class="modal-element-label">Valoración*</p>
+          <p class="modal-rating">
+            <input id="radio1" type="radio" name="estrellas" value="5">
+            <label for="radio1" class="modal-star"><i class="icon-star"></i></label>
+            <input id="radio2" type="radio" name="estrellas" value="4">
+            <label for="radio2" class="modal-star"><i class="icon-star"></i></label>
+            <input id="radio3" type="radio" name="estrellas" value="3">
+            <label for="radio3" class="modal-star"><i class="icon-star"></i></label>
+            <input id="radio4" type="radio" name="estrellas" value="2">
+            <label for="radio4" class="modal-star"><i class="icon-star"></i></label>
+            <input id="radio5" type="radio" name="estrellas" value="1">
+            <label for="radio5" class="modal-star"><i class="icon-star"></i></label>
+          </p>
+        </div>
+        <div class="modal-element-container">
+          <label for="comantario" class="modal-element-label self-start">Comentario*</label>
+          <textarea name="comentario" id="" rows="6" class="modal-comment"
+            placeholder="Escribe un comentarios para ayudar a otras personas, tu opinión es importante"></textarea>
+        </div>
+        <button class="product-button">Valorar producto</button>
+      </form>
+    </div>
+  </div>
   <footer id="footer" class="footer">
     <div class="footer-up">
       <div class="footer-container">
@@ -485,5 +514,6 @@
 <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700|Titillium+Web:200,400,600" rel="stylesheet">
 <script src="src/js/base.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
+<script src="src/js/product.js"></script> <!-- Javascript para toda la pagina, header, menu, menu mobile, footer-->
 
 </html>
