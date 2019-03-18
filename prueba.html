@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -38,6 +38,110 @@
 
   };
 </script>
+<style>
+  .page-content {
+    display: flex;
+    background: white;
+    justify-content: center;
+    margin: 105px auto 40px auto;
+    max-width: 1024px;
+    /*flex-direction: column;*/
+    align-items: center;
+    padding-top: 35px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    margin-top: 120px;
+  }
+
+  .campo {
+    width: 50%;
+    padding-right: 25px;
+    box-sizing: border-box;
+  }
+
+  .login-signup .campo form input:focus {
+    border: 1px solid #2196F3;
+    border: 1px solid #363738;
+    border-left: 10px solid #2196F3;
+    border-left: 10px solid #363738;
+    padding-left: 10px;
+  }
+
+  .page-content form {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .contenido-cliente-update {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .campo-1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .campo-1 label {
+    width: 40%;
+    text-align: right;
+    margin-right: 15px;
+    line-height: 1em;
+    font-size: .85em;
+    font-weight: bold;
+  }
+
+  .input-box1 {
+    width: 100%;
+  }
+
+  .input-box1 input {
+    height: 35px;
+    width: 100%;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .input-cliente-select {
+    width: 100%;
+    height: 36px;
+    padding-left: 15px
+  }
+
+  .custom-button {
+    width: 25%;
+    border: 2px solid #141414;
+    background: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #141414;
+    font-weight: bold;
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+
+  .custom-button:hover {
+    background: #141414;
+    color: white;
+  }
+
+  @media screen and (max-width:760px) {
+    .campo {
+      width: 100%;
+    }
+
+    .custom-button {
+      width: 100%;
+      align-self: center;
+    }
+  }
+</style>
 
 <body>
 
@@ -323,188 +427,147 @@
   <!-- Inicio contenido dinámico -->
 
   <div class="page-content">
-    <section class="hero" id="hero">
-      <picture class="img-behind" id="img-behind">
-        <source srcset="" type="image/webp">
-        <img src="" alt="">
-      </picture>
-      <picture class="img-top" id="img-top">
-        <source srcset="" type="image/webp">
-        <img src="" alt="">
-      </picture>
-      <div class="hero-info" id="hero-info">
-        <div class="hero-info-container">
-          <p class="hero-tag"></p>
-          <p class="hero-title"></p>
-          <p class="hero-description"></p>
-          <button class="hero-button">Ver más</button>
-        </div>
-        <div class="controls">
-          <div class="previous" id="previous">Anterior</div>
-          <div class="next" id="next">Siguiente</div>
-        </div>
-      </div>
-    </section>
-    <section class="lastest">
+    <form action="/cliente/actualizar/" method="post">
+      <input type="hidden" name="csrfmiddlewaretoken"
+        value="nHmhwBsQ6IhpngipCljiuO58elEPOavBAJwhXs5J0fVO7JhKoZZUQAQGE4ECjjq7">
+      <div class="contenido-cliente-update">
+        <div class="campo">
 
-      <h2 class="section-title">Más recientes</h2>
-      <div class="lastest-arrivals">
+          <div class="campo-1">
+            <label for="first_name">Nombre
 
-        <div class="lastest-arrivals-product lap1">
-          <picture class="lastest-arrivals-product-picture">
-            <source srcset="./assets/images/running-hero.webp" type="image/webp">
-            <img class="lastest-arrivals-product-img" src="./assets/images/runnig-hero.jpg" alt="Imagen producto">
-          </picture>
-          <div class="lastest-arrivals-product-info">
-            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-            <a href="" class="lastest-arrivals-product-info-button">Ver producto</a>
-          </div>
-        </div>
-        <div class="lastest-arrivals-product lap2">
-          <picture class="lastest-arrivals-product-picture">
-            <source srcset="./assets/images/duque-hero.webp" type="image/webp">
-            <img class="lastest-arrivals-product-img" src="./assets/images/duque-hero.jpg" alt="Imagen producto">
-          </picture>
-          <div class="lastest-arrivals-product-info">
-            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-            <a href="" class="lastest-arrivals-product-info-button">Ver producto</a>
-          </div>
-        </div>
-        <div class="lastest-arrivals-product lap3">
-          <picture class="lastest-arrivals-product-picture">
-            <source srcset="./assets/images/zapato-hero.webp" type="image/webp">
-            <img class="lastest-arrivals-product-img" src="./assets/images/zapato-hero.jpg" alt="Imagen producto">
-          </picture>
-          <div class="lastest-arrivals-product-info">
-            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-            <a href="" class="lastest-arrivals-product-info-button">Ver producto</a>
-          </div>
-        </div>
-        <div class="lastest-arrivals-product lap4">
-          <picture class="lastest-arrivals-product-picture">
-            <source srcset="./assets/images/hero-2.webp" type="image/webp">
-            <img class="lastest-arrivals-product-img" src="./assets/images/hero-2.jpg" alt="Imagen producto">
-          </picture>
-          <div class="lastest-arrivals-product-info">
-            <h3 class="lastest-arrivals-product-info-title">Nombre producto</h3>
-            <a href="" class="lastest-arrivals-product-info-button">Ver producto</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="content">
+              <span class="required">*</span>
 
-      <div class="suggestion">
-        <h2 class="section-title">Recomendados para ti</h2>
-        <p class="suggestion-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor
-          incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-        <div class="suggestion-products">
-          <a href="" class="suggestion-product">
-            <figure class="card-image-container">
-              <picture>
-                <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
-                <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
-              </picture>
-              <div class="card-view-container">
-                <div class="card-view"> <i class="icon-search"></i>Ver</div>
-              </div>
-            </figure>
-            <div class="card-info">
-              <p class="card-category">Camisa</p>
-              <p class="card-title">Camisa adidas</p>
-              <div class="card-bottom">
-                <p class="card-price">$20.0</p>
-                <p class="card-rating">
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-empty"></i>
-                </p>
-              </div>
+            </label>
+
+
+            <div class="input-box1">
+              <input type="text" name="first_name" value="nombre admin" maxlength="30" class="input-text" required=""
+                id="id_first_name">
             </div>
-          </a>
-          <a href="" class="suggestion-product">
-            <figure class="card-image-container">
-              <picture>
-                <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
-                <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
-              </picture>
-              <div class="card-view-container">
-                <div class="card-view"> <i class="icon-search"></i>Ver</div>
-              </div>
-            </figure>
-            <div class="card-info">
-              <p class="card-category">Camisa</p>
-              <p class="card-title">Camisa adidas</p>
-              <div class="card-bottom">
-                <p class="card-price">$20.0</p>
-                <p class="card-rating">
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-half"></i>
-                  <i class="icon-star-empty"></i>
-                  <i class="icon-star-empty"></i>
-                </p>
-              </div>
+            <p></p>
+            <p></p>
+
+          </div>
+
+          <div class="campo-1">
+            <label for="last_name">Apellidos
+
+              <span class="required">*</span>
+
+            </label>
+
+
+            <div class="input-box1">
+              <input type="text" name="last_name" value="apellido admin" maxlength="150" class="input-text" required=""
+                id="id_last_name">
             </div>
-          </a>
-          <a href="" class="suggestion-product">
-            <figure class="card-image-container">
-              <picture>
-                <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
-                <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
-              </picture>
-              <div class="card-view-container">
-                <div class="card-view"> <i class="icon-search"></i>Ver</div>
-              </div>
-            </figure>
-            <div class="card-info">
-              <p class="card-category">Camisa</p>
-              <p class="card-title">Camisa adidas</p>
-              <div class="card-bottom">
-                <p class="card-price">$20.0</p>
-                <p class="card-rating">
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                </p>
-              </div>
+            <p></p>
+            <p></p>
+
+          </div>
+
+          <div class="campo-1">
+            <label for="email">Dirección de correo electrónico
+
+              <span class="required">*</span>
+
+            </label>
+
+
+            <div class="input-box1">
+              <input type="email" name="email" value="a@gmail.com" maxlength="254" class="input-text" required=""
+                id="id_email">
             </div>
-          </a>
-          <a href="" class="suggestion-product">
-            <figure class="card-image-container">
-              <picture>
-                <source srcset="assets/images/chaqueta-hombre-cuero.webp" type="image/webp">
-                <img class="card-image" src="assets/images/chaqueta-hombre-cuero.jpg" alt="Imagen producto">
-              </picture>
-              <div class="card-view-container">
-                <div class="card-view"> <i class="icon-search"></i>Ver</div>
-              </div>
-            </figure>
-            <div class="card-info">
-              <p class="card-category">Camisa</p>
-              <p class="card-title">Camisa adidas</p>
-              <div class="card-bottom">
-                <p class="card-price">$20.0</p>
-                <p class="card-rating">
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-full"></i>
-                  <i class="icon-star-half"></i>
-                </p>
-              </div>
-            </div>
-          </a>
+            <p></p>
+            <p></p>
+
+          </div>
+
         </div>
+        <div class="campo">
+
+          <div class="campo-1">
+            <label for="tipo_documento">Tipo de documento
+
+              <span class="required">*</span>
+
+            </label>
+
+            <div class="input-box1">
+              <select name="tipo_documento" class="input-text input-select input-cliente-select" required=""
+                id="id_tipo_documento">
+                <option value="">---------</option>
+
+                <option value="CC" selected="">Cédula de Ciudadanía</option>
+
+                <option value="CE">Cédula de Extranjería</option>
+
+                <option value="RC">Registro Civil</option>
+
+                <option value="NI">NI Indigena</option>
+
+                <option value="VT">Visa de Trabajo</option>
+
+                <option value="TI">Tarjeta de Identidad</option>
+
+                <option value="No Registra">No Registra</option>
+
+              </select>
+            </div>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div class="campo-1">
+            <label for="numero_documento">Número de documento
+
+              <span class="required">*</span>
+
+            </label>
+
+            <div class="input-box1">
+              <input type="text" name="numero_documento" value="234234" class="input-text input-cliente"
+                placeholder="Documento" required="" maxlength="20" id="id_numero_documento">
+            </div>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div class="campo-1">
+            <label for="telefono">Teléfono
+
+              <span class="required">*</span>
+
+            </label>
+
+            <div class="input-box1">
+              <input type="text" name="telefono" value="4234234" class="input-text input-cliente" placeholder="Telefono"
+                required="" maxlength="20" id="id_telefono">
+            </div>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div class="campo-1">
+            <label for="telefono2">Teléfono 2
+
+            </label>
+
+            <div class="input-box1">
+              <input type="text" name="telefono2" value="2342343" class="input-text input-cliente"
+                placeholder="Telefono 2" maxlength="20" id="id_telefono2">
+            </div>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+
       </div>
-    </section>
+      <button type="submit" class="custom-button button-danger">
+        <span class="icon-arrow-right"></span> guardar
+      </button>
+    </form>
   </div>
 
   <footer id="footer" class="footer">
